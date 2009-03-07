@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA2981490F5FED9D00789EFC /* color.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981250F5FED9D00789EFC /* color.h */; };
+		DA29814A0F5FED9E00789EFC /* colorspace.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981260F5FED9D00789EFC /* colorspace.c */; };
+		DA29814B0F5FED9E00789EFC /* colorspace.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981270F5FED9D00789EFC /* colorspace.h */; };
+		DA29814C0F5FED9E00789EFC /* colortypes.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981280F5FED9D00789EFC /* colortypes.h */; };
+		DA29814D0F5FED9E00789EFC /* curve-map.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981290F5FED9D00789EFC /* curve-map.c */; };
+		DA29814E0F5FED9E00789EFC /* curve-map.h in Headers */ = {isa = PBXBuildFile; fileRef = DA29812A0F5FED9D00789EFC /* curve-map.h */; };
+		DA29814F0F5FED9E00789EFC /* curve.c in Sources */ = {isa = PBXBuildFile; fileRef = DA29812B0F5FED9D00789EFC /* curve.c */; };
+		DA2981500F5FED9E00789EFC /* curve.h in Headers */ = {isa = PBXBuildFile; fileRef = DA29812C0F5FED9D00789EFC /* curve.h */; };
+		DA2981510F5FED9E00789EFC /* hsl.c in Sources */ = {isa = PBXBuildFile; fileRef = DA29812D0F5FED9D00789EFC /* hsl.c */; };
+		DA2981520F5FED9E00789EFC /* hsl.h in Headers */ = {isa = PBXBuildFile; fileRef = DA29812E0F5FED9D00789EFC /* hsl.h */; };
+		DA2981530F5FED9E00789EFC /* hsv.c in Sources */ = {isa = PBXBuildFile; fileRef = DA29812F0F5FED9D00789EFC /* hsv.c */; };
+		DA2981540F5FED9E00789EFC /* hsv.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981300F5FED9D00789EFC /* hsv.h */; };
+		DA2981570F5FED9E00789EFC /* math1.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981330F5FED9D00789EFC /* math1.h */; };
+		DA2981580F5FED9E00789EFC /* operationbrightnesscontrast.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981340F5FED9D00789EFC /* operationbrightnesscontrast.c */; };
+		DA2981590F5FED9E00789EFC /* operationbrightnesscontrast.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981350F5FED9D00789EFC /* operationbrightnesscontrast.h */; };
+		DA29815A0F5FED9E00789EFC /* operationcolorbalance.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981360F5FED9D00789EFC /* operationcolorbalance.c */; };
+		DA29815B0F5FED9E00789EFC /* operationcolorbalance.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981370F5FED9D00789EFC /* operationcolorbalance.h */; };
+		DA29815C0F5FED9E00789EFC /* operationcolorize.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981380F5FED9D00789EFC /* operationcolorize.c */; };
+		DA29815D0F5FED9E00789EFC /* operationcolorize.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981390F5FED9D00789EFC /* operationcolorize.h */; };
+		DA29815E0F5FED9E00789EFC /* operationcurves.c in Sources */ = {isa = PBXBuildFile; fileRef = DA29813A0F5FED9D00789EFC /* operationcurves.c */; };
+		DA29815F0F5FED9E00789EFC /* operationcurves.h in Headers */ = {isa = PBXBuildFile; fileRef = DA29813B0F5FED9D00789EFC /* operationcurves.h */; };
+		DA2981600F5FED9E00789EFC /* operationhuesaturation.c in Sources */ = {isa = PBXBuildFile; fileRef = DA29813C0F5FED9D00789EFC /* operationhuesaturation.c */; };
+		DA2981610F5FED9E00789EFC /* operationhuesaturation.h in Headers */ = {isa = PBXBuildFile; fileRef = DA29813D0F5FED9D00789EFC /* operationhuesaturation.h */; };
+		DA2981620F5FED9E00789EFC /* operationlevels.c in Sources */ = {isa = PBXBuildFile; fileRef = DA29813E0F5FED9D00789EFC /* operationlevels.c */; };
+		DA2981630F5FED9E00789EFC /* operationlevels.h in Headers */ = {isa = PBXBuildFile; fileRef = DA29813F0F5FED9D00789EFC /* operationlevels.h */; };
+		DA2981640F5FED9E00789EFC /* operationposterize.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981400F5FED9D00789EFC /* operationposterize.c */; };
+		DA2981650F5FED9E00789EFC /* operationposterize.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981410F5FED9D00789EFC /* operationposterize.h */; };
+		DA2981660F5FED9E00789EFC /* operationthreshold.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981420F5FED9D00789EFC /* operationthreshold.c */; };
+		DA2981670F5FED9E00789EFC /* operationthreshold.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981430F5FED9D00789EFC /* operationthreshold.h */; };
+		DA2981680F5FED9E00789EFC /* rgb-parse.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981440F5FED9D00789EFC /* rgb-parse.c */; };
+		DA2981690F5FED9E00789EFC /* rgb.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981450F5FED9D00789EFC /* rgb.c */; };
+		DA29816A0F5FED9E00789EFC /* rgb.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981460F5FED9D00789EFC /* rgb.h */; };
+		DA29816B0F5FED9E00789EFC /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2981470F5FED9D00789EFC /* vector.c */; };
+		DA29816C0F5FED9E00789EFC /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2981480F5FED9D00789EFC /* vector.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2AAC0630554660B00DB518D /* libImageTools.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libImageTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA2981250F5FED9D00789EFC /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		DA2981260F5FED9D00789EFC /* colorspace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = colorspace.c; sourceTree = "<group>"; };
+		DA2981270F5FED9D00789EFC /* colorspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorspace.h; sourceTree = "<group>"; };
+		DA2981280F5FED9D00789EFC /* colortypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colortypes.h; sourceTree = "<group>"; };
+		DA2981290F5FED9D00789EFC /* curve-map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "curve-map.c"; sourceTree = "<group>"; };
+		DA29812A0F5FED9D00789EFC /* curve-map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "curve-map.h"; sourceTree = "<group>"; };
+		DA29812B0F5FED9D00789EFC /* curve.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = curve.c; sourceTree = "<group>"; };
+		DA29812C0F5FED9D00789EFC /* curve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curve.h; sourceTree = "<group>"; };
+		DA29812D0F5FED9D00789EFC /* hsl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hsl.c; sourceTree = "<group>"; };
+		DA29812E0F5FED9D00789EFC /* hsl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hsl.h; sourceTree = "<group>"; };
+		DA29812F0F5FED9D00789EFC /* hsv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hsv.c; sourceTree = "<group>"; };
+		DA2981300F5FED9D00789EFC /* hsv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hsv.h; sourceTree = "<group>"; };
+		DA2981330F5FED9D00789EFC /* math1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math1.h; sourceTree = "<group>"; };
+		DA2981340F5FED9D00789EFC /* operationbrightnesscontrast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operationbrightnesscontrast.c; sourceTree = "<group>"; };
+		DA2981350F5FED9D00789EFC /* operationbrightnesscontrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operationbrightnesscontrast.h; sourceTree = "<group>"; };
+		DA2981360F5FED9D00789EFC /* operationcolorbalance.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operationcolorbalance.c; sourceTree = "<group>"; };
+		DA2981370F5FED9D00789EFC /* operationcolorbalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operationcolorbalance.h; sourceTree = "<group>"; };
+		DA2981380F5FED9D00789EFC /* operationcolorize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operationcolorize.c; sourceTree = "<group>"; };
+		DA2981390F5FED9D00789EFC /* operationcolorize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operationcolorize.h; sourceTree = "<group>"; };
+		DA29813A0F5FED9D00789EFC /* operationcurves.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operationcurves.c; sourceTree = "<group>"; };
+		DA29813B0F5FED9D00789EFC /* operationcurves.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operationcurves.h; sourceTree = "<group>"; };
+		DA29813C0F5FED9D00789EFC /* operationhuesaturation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operationhuesaturation.c; sourceTree = "<group>"; };
+		DA29813D0F5FED9D00789EFC /* operationhuesaturation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operationhuesaturation.h; sourceTree = "<group>"; };
+		DA29813E0F5FED9D00789EFC /* operationlevels.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operationlevels.c; sourceTree = "<group>"; };
+		DA29813F0F5FED9D00789EFC /* operationlevels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operationlevels.h; sourceTree = "<group>"; };
+		DA2981400F5FED9D00789EFC /* operationposterize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operationposterize.c; sourceTree = "<group>"; };
+		DA2981410F5FED9D00789EFC /* operationposterize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operationposterize.h; sourceTree = "<group>"; };
+		DA2981420F5FED9D00789EFC /* operationthreshold.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operationthreshold.c; sourceTree = "<group>"; };
+		DA2981430F5FED9D00789EFC /* operationthreshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operationthreshold.h; sourceTree = "<group>"; };
+		DA2981440F5FED9D00789EFC /* rgb-parse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "rgb-parse.c"; sourceTree = "<group>"; };
+		DA2981450F5FED9D00789EFC /* rgb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rgb.c; sourceTree = "<group>"; };
+		DA2981460F5FED9D00789EFC /* rgb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rgb.h; sourceTree = "<group>"; };
+		DA2981470F5FED9D00789EFC /* vector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vector.c; sourceTree = "<group>"; };
+		DA2981480F5FED9D00789EFC /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289988505E68E00004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* ImageTools */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = ImageTools;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DA2981250F5FED9D00789EFC /* color.h */,
+				DA2981260F5FED9D00789EFC /* colorspace.c */,
+				DA2981270F5FED9D00789EFC /* colorspace.h */,
+				DA2981280F5FED9D00789EFC /* colortypes.h */,
+				DA2981290F5FED9D00789EFC /* curve-map.c */,
+				DA29812A0F5FED9D00789EFC /* curve-map.h */,
+				DA29812B0F5FED9D00789EFC /* curve.c */,
+				DA29812C0F5FED9D00789EFC /* curve.h */,
+				DA29812D0F5FED9D00789EFC /* hsl.c */,
+				DA29812E0F5FED9D00789EFC /* hsl.h */,
+				DA29812F0F5FED9D00789EFC /* hsv.c */,
+				DA2981300F5FED9D00789EFC /* hsv.h */,
+				DA2981330F5FED9D00789EFC /* math1.h */,
+				DA2981340F5FED9D00789EFC /* operationbrightnesscontrast.c */,
+				DA2981350F5FED9D00789EFC /* operationbrightnesscontrast.h */,
+				DA2981360F5FED9D00789EFC /* operationcolorbalance.c */,
+				DA2981370F5FED9D00789EFC /* operationcolorbalance.h */,
+				DA2981380F5FED9D00789EFC /* operationcolorize.c */,
+				DA2981390F5FED9D00789EFC /* operationcolorize.h */,
+				DA29813A0F5FED9D00789EFC /* operationcurves.c */,
+				DA29813B0F5FED9D00789EFC /* operationcurves.h */,
+				DA29813C0F5FED9D00789EFC /* operationhuesaturation.c */,
+				DA29813D0F5FED9D00789EFC /* operationhuesaturation.h */,
+				DA29813E0F5FED9D00789EFC /* operationlevels.c */,
+				DA29813F0F5FED9D00789EFC /* operationlevels.h */,
+				DA2981400F5FED9D00789EFC /* operationposterize.c */,
+				DA2981410F5FED9D00789EFC /* operationposterize.h */,
+				DA2981420F5FED9D00789EFC /* operationthreshold.c */,
+				DA2981430F5FED9D00789EFC /* operationthreshold.h */,
+				DA2981440F5FED9D00789EFC /* rgb-parse.c */,
+				DA2981450F5FED9D00789EFC /* rgb.c */,
+				DA2981460F5FED9D00789EFC /* rgb.h */,
+				DA2981470F5FED9D00789EFC /* vector.c */,
+				DA2981480F5FED9D00789EFC /* vector.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC0630554660B00DB518D /* libImageTools.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC0600554660B00DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA2981490F5FED9D00789EFC /* color.h in Headers */,
+				DA29814B0F5FED9E00789EFC /* colorspace.h in Headers */,
+				DA29814C0F5FED9E00789EFC /* colortypes.h in Headers */,
+				DA29814E0F5FED9E00789EFC /* curve-map.h in Headers */,
+				DA2981500F5FED9E00789EFC /* curve.h in Headers */,
+				DA2981520F5FED9E00789EFC /* hsl.h in Headers */,
+				DA2981540F5FED9E00789EFC /* hsv.h in Headers */,
+				DA2981570F5FED9E00789EFC /* math1.h in Headers */,
+				DA2981590F5FED9E00789EFC /* operationbrightnesscontrast.h in Headers */,
+				DA29815B0F5FED9E00789EFC /* operationcolorbalance.h in Headers */,
+				DA29815D0F5FED9E00789EFC /* operationcolorize.h in Headers */,
+				DA29815F0F5FED9E00789EFC /* operationcurves.h in Headers */,
+				DA2981610F5FED9E00789EFC /* operationhuesaturation.h in Headers */,
+				DA2981630F5FED9E00789EFC /* operationlevels.h in Headers */,
+				DA2981650F5FED9E00789EFC /* operationposterize.h in Headers */,
+				DA2981670F5FED9E00789EFC /* operationthreshold.h in Headers */,
+				DA29816A0F5FED9E00789EFC /* rgb.h in Headers */,
+				DA29816C0F5FED9E00789EFC /* vector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC0620554660B00DB518D /* ImageTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "ImageTools" */;
+			buildPhases = (
+				D2AAC0600554660B00DB518D /* Headers */,
+				D2AAC0610554660B00DB518D /* Sources */,
+				D289988505E68E00004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageTools;
+			productName = ImageTools;
+			productReference = D2AAC0630554660B00DB518D /* libImageTools.a */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "ImageTools" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* ImageTools */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC0620554660B00DB518D /* ImageTools */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC0610554660B00DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA29814A0F5FED9E00789EFC /* colorspace.c in Sources */,
+				DA29814D0F5FED9E00789EFC /* curve-map.c in Sources */,
+				DA29814F0F5FED9E00789EFC /* curve.c in Sources */,
+				DA2981510F5FED9E00789EFC /* hsl.c in Sources */,
+				DA2981530F5FED9E00789EFC /* hsv.c in Sources */,
+				DA2981580F5FED9E00789EFC /* operationbrightnesscontrast.c in Sources */,
+				DA29815A0F5FED9E00789EFC /* operationcolorbalance.c in Sources */,
+				DA29815C0F5FED9E00789EFC /* operationcolorize.c in Sources */,
+				DA29815E0F5FED9E00789EFC /* operationcurves.c in Sources */,
+				DA2981600F5FED9E00789EFC /* operationhuesaturation.c in Sources */,
+				DA2981620F5FED9E00789EFC /* operationlevels.c in Sources */,
+				DA2981640F5FED9E00789EFC /* operationposterize.c in Sources */,
+				DA2981660F5FED9E00789EFC /* operationthreshold.c in Sources */,
+				DA2981680F5FED9E00789EFC /* rgb-parse.c in Sources */,
+				DA2981690F5FED9E00789EFC /* rgb.c in Sources */,
+				DA29816B0F5FED9E00789EFC /* vector.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB914B08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_NAME = ImageTools;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
+			};
+			name = Debug;
+		};
+		1DEB914C08733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ImageTools;
+			};
+			name = Release;
+		};
+		1DEB914F08733D8E0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACH_O_TYPE = mh_dylib;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
+			};
+			name = Debug;
+		};
+		1DEB915008733D8E0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB914A08733D8E0010E9CD /* Build configuration list for PBXNativeTarget "ImageTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914B08733D8E0010E9CD /* Debug */,
+				1DEB914C08733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB914E08733D8E0010E9CD /* Build configuration list for PBXProject "ImageTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB914F08733D8E0010E9CD /* Debug */,
+				1DEB915008733D8E0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
