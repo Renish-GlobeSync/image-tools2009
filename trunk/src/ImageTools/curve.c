@@ -26,6 +26,34 @@ curve_plot (Curve *curve,
 
 /*  public functions  */
 void
+curve_init (GimpCurve *curve)
+{
+  curve->n_points  = 0;
+  curve->points    = NULL;
+  curve->n_samples = 0;
+  curve->samples   = NULL;
+  curve->identity  = FALSE;
+}
+
+void
+curve_finalize (GimpCurve *curve)
+{
+  if (curve->points)
+    {
+      g_free (curve->points);
+      curve->points = NULL;
+    }
+
+  if (curve->samples)
+    {
+      g_free (curve->samples);
+      curve->samples = NULL;
+    }
+
+  G_OBJECT_CLASS (parent_class)->finalize (object);
+}
+
+void
 curve_reset (Curve *curve,
 			 bool   reset_type)
 {
@@ -97,7 +125,7 @@ curve_get_curve_type (Curve *curve)
 	return curve->curve_type;
 }
 
-static void
+void
 curve_set_n_points (Curve *curve,
 					int       n_points)
 {
@@ -133,7 +161,7 @@ curve_get_n_points (Curve *curve)
 	return curve->n_points;
 }
 
-static void
+void
 curve_set_n_samples (Curve *curve,
 					 int       n_samples)
 {
@@ -286,7 +314,7 @@ curve_get_uchar (Curve *curve,
 
 /*  private functions  */
 
-static void
+void
 curve_calculate (Curve *curve)
 {
 	int *points;
