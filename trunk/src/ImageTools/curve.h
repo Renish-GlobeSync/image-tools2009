@@ -7,9 +7,9 @@
 // 曲线描述结构
 typedef struct {
     /** 
-        曲线类型
-        CURVE_SMOOTH 平滑曲线
-        CURVE_FREE 手工绘制
+        type of the curve
+        CURVE_SMOOTH the curve is smooth
+        CURVE_FREE the curve is free
      */
 	CurveType curve_type;
 	// 控制点数目，控制点是曲线经过的某几个固定点，0.0 <= x, y <= 1.0
@@ -24,6 +24,9 @@ typedef struct {
 	bool      identity;
 } Curve;
 
+/** 
+    初始化Curve结构
+    
 void        curve_init              (Curve     *curve);
 
 void        curve_finalize          (Curve     *curve);

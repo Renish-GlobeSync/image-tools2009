@@ -78,7 +78,7 @@ curve_map_pixels (Curve *curve_colors,
 								  curve_alpha))
     {
 		case CURVE_NONE:
-			memcpy (dest, src, samples * 4 * sizeof (float));
+			memcpy (dest, src, samples * 4 * sizeof (unsigned char));
 			break;
 			
 		case CURVE_COLORS:

@@ -19,11 +19,11 @@ operation_curves (void                *in_buf,
   if (! config)
     return FALSE;
 
-	curve_map_pixels (config->curve[0],
-                         config->curve[1],
-                         config->curve[2],
-                         config->curve[3],
-                         config->curve[4], src, dest, samples);
+	curve_map_pixels (&config->curve[0],
+                         &config->curve[1],
+                         &config->curve[2],
+                         &config->curve[3],
+                         &config->curve[4], src, dest, samples);
 
   return TRUE;
 }

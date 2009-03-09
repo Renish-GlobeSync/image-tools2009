@@ -7,16 +7,6 @@
 
 #include <stdlib.h>
 
-enum
-{
-	PROP_0,
-	PROP_CURVE_TYPE,
-	PROP_N_POINTS,
-	PROP_POINTS,
-	PROP_N_SAMPLES,
-	PROP_SAMPLES
-};
-
 static void
 curve_plot (Curve *curve,
 			int       p1,
@@ -26,31 +16,31 @@ curve_plot (Curve *curve,
 
 /*  public functions  */
 void
-curve_init (GimpCurve *curve)
+curve_init (Curve *curve)
 {
+  curve->curve_type = CURVE_SMOOTH;
   curve->n_points  = 0;
   curve->points    = NULL;
   curve->n_samples = 0;
   curve->samples   = NULL;
-  curve->identity  = FALSE;
+  curve->identity  = true;
 }
 
 void
-curve_finalize (GimpCurve *curve)
+curve_finalize (Curve *curve)
 {
-  if (curve->points)
+    if (curve->points)
     {
-      g_free (curve->points);
-      curve->points = NULL;
+        free (curve->points);
+        curve->points = NULL;
     }
 
-  if (curve->samples)
+    if (curve->samples)
     {
-      g_free (curve->samples);
-      curve->samples = NULL;
+        free (curve->samples);
+        curve->samples = NULL;
     }
 
-  G_OBJECT_CLASS (parent_class)->finalize (object);
 }
 
 void
@@ -135,7 +125,8 @@ curve_set_n_points (Curve *curve,
 		
 		curve->n_points = n_points;
 		
-		free(curve->points);
+		if (curve->points)
+		    free(curve->points);
 		curve->points = malloc(sizeof(curve->points[0]) * curve->n_points);
 		
 		curve->points[0].x = 0.0;
@@ -171,7 +162,8 @@ curve_set_n_samples (Curve *curve,
 		
 		curve->n_samples = n_samples;
 
-		free(curve->samples);
+		if (curve->samples)
+		    free(curve->samples);
 		curve->samples = malloc(sizeof(curve->samples[0]) * curve->n_samples);
 		
 		for (i = 0; i < curve->n_samples; i++)

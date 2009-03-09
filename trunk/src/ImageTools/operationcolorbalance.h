@@ -9,7 +9,9 @@
 
 // 色彩平衡的配置参数结构
 typedef struct {
+    // 是否保持亮度
 	bool		preserve_luminosity;
+	// 红色调整量，3个数字分别是背景
 	double		cyan_red[3];
 	double		magenta_green[3];
 	double		yellow_blue[3];
