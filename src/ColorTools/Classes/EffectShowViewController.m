@@ -92,10 +92,11 @@
 			break;
 		case 2:
 			self.title = @"Hue Saturation";
-			for (int i = 0; i < 3; i++) {
+			for (int i = 0; i < 7; i++) {
 				hs_config.hue[i] = -1.0;
-				hs_config.saturation[i] = -1.0;
-				hs_config.lightness[i] = -1.0;
+				hs_config.saturation[i] = 0.0;
+				hs_config.lightness[i] = 0.0;
+				hs_config.overlap = 1.0;
 			}
 			imageNew = ImageTools(originalImage, operation_hue_saturation, &hs_config);
 			//[delegate ImageTools
@@ -105,7 +106,7 @@
 			self.title = @"Colorize";
 			c_config.hue = 0.5;
 			c_config.saturation = 1.0;
-			c_config.lightness = .5;
+			c_config.lightness = 0.5;
 			imageNew = ImageTools(originalImage, operation_colorize, &c_config);
 			ivImage.image = imageNew;
 			break;
@@ -115,7 +116,7 @@
 			t_config.low = 0;
 			t_config.high = 0;
 			 */
-			bc_config.brightness = -127.0;
+			bc_config.brightness = -1.0;
 			bc_config.contrast = 0.0;
 			imageNew = ImageTools(originalImage, operation_brightness_contrast, &bc_config);
 			ivImage.image = imageNew;
