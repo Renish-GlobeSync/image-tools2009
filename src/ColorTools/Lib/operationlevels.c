@@ -59,28 +59,36 @@ operation_levels (void                *in_buf,
 	
 	while (samples--)
     {
-		for (channel = 0; channel < 4; channel++)
+		for (channel = RED_PIX; channel < BLUE_PIX + 1; channel++)
         {
 			double value;
 			
-			value = levels_map (src[channel],
-								inv_gamma[channel + 1],
-								config->low_input[channel + 1],
-								config->high_input[channel + 1],
-								config->low_output[channel + 1],
-								config->high_output[channel + 1]);
+			value = levels_map ((double)src[channel] / 255.0,
+								inv_gamma[channel + HISTOGRAM_RED - RED_PIX],
+								config->low_input[channel + HISTOGRAM_RED - RED_PIX],
+								config->high_input[channel + HISTOGRAM_RED - RED_PIX],
+								config->low_output[channel + HISTOGRAM_RED - RED_PIX],
+								config->high_output[channel + HISTOGRAM_RED - RED_PIX]);
 			
 			/* don't apply the overall curve to the alpha channel */
-			if (channel != ALPHA_PIX)
-				value = levels_map (value,
-									inv_gamma[0],
-									config->low_input[0],
-									config->high_input[0],
-									config->low_output[0],
-									config->high_output[0]);
+
+			value = levels_map (value,
+								inv_gamma[0],
+								config->low_input[0],
+								config->high_input[0],
+								config->low_output[0],
+								config->high_output[0]);
 			
-			dest[channel] = value;
+			dest[channel] = ROUND (CLAMP (value, 0.0, 1.0) * 255.0);
         }
+		
+		double value = levels_map ((double)src[ALPHA_PIX] / 255.0,
+							inv_gamma[HISTOGRAM_ALPHA],
+							config->low_input[HISTOGRAM_ALPHA],
+							config->high_input[HISTOGRAM_ALPHA],
+							config->low_output[HISTOGRAM_ALPHA],
+							config->high_output[HISTOGRAM_ALPHA]);
+		dest[ALPHA_PIX] = ROUND (CLAMP (value, 0.0, 1.0) * 255.0);
 		
 		src  += 4;
 		dest += 4;
