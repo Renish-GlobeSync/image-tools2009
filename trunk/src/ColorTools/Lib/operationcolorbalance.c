@@ -4,8 +4,8 @@
 #include "base_enums.h"
 #include "operationcolorbalance.h"
 
-static inline float
-color_balance_map (float  value,
+static inline double
+color_balance_map (double  value,
 				   double shadows,
 				   double midtones,
 				   double highlights)
@@ -57,8 +57,9 @@ operation_color_balance(void * in_buf,
 	while (samples--)
 	{
 		RGB rgb;
-		rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
 		RGB rgb_n;
+
+		rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
 
 		rgb_n.r = color_balance_map (rgb.r,
 								 config->cyan_red[SHADOWS],

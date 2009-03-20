@@ -37,7 +37,7 @@ curve_map_value (Curve *curve,
 	
 	if (value < 0.0)
     {
-		return curve->samples[0];
+		return curve->samples[RED_PIX];
     }
 	else if (value >= 1.0)
     {
@@ -84,15 +84,17 @@ curve_map_pixels (Curve *curve_colors,
 		case CURVE_COLORS:
 			while (samples--)
 			{
-				RGB rgb;
-				rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
-				rgb.r = curve_map_value (curve_colors, rgb.r);
-				rgb.g = curve_map_value (curve_colors, rgb.g);
-				rgb.b = curve_map_value (curve_colors, rgb.b);
-				rgb_get_uchar(&rgb, dest + RED_PIX, dest + GREEN_PIX, dest + BLUE_PIX);
 				/* don't apply the colors curve to the alpha channel */
-				dest[3] = src[3];
-				
+				dest[ALPHA_PIX] = src[ALPHA_PIX];
+				{
+					RGB rgb;
+					rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
+					rgb.r = curve_map_value (curve_colors, rgb.r);
+					rgb.g = curve_map_value (curve_colors, rgb.g);
+					rgb.b = curve_map_value (curve_colors, rgb.b);
+					rgb_get_uchar(&rgb, dest + RED_PIX, dest + GREEN_PIX, dest + BLUE_PIX);
+				}
+
 				src  += 4;
 				dest += 4;
 			}
@@ -101,13 +103,15 @@ curve_map_pixels (Curve *curve_colors,
 		case CURVE_RED:
 			while (samples--)
 			{
-				double r = (double) src[0] / 255.0;
-				r = curve_map_value (curve_red, r);
-				dest[0] = ROUND (CLAMP(r, 0.0, 1.0) * 255.0);
-				dest[1] = src[1];
-				dest[2] = src[2];
-				dest[3] = src[3];
-				
+				dest[ALPHA_PIX] = src[ALPHA_PIX];
+				{
+					double r = (double) src[RED_PIX] / 255.0;
+					r = curve_map_value (curve_red, r);
+					dest[RED_PIX] = ROUND (CLAMP(r, 0.0, 1.0) * 255.0);
+				}
+				dest[GREEN_PIX] = src[GREEN_PIX];
+				dest[BLUE_PIX] = src[BLUE_PIX];
+
 				src  += 4;
 				dest += 4;
 			}
@@ -116,12 +120,14 @@ curve_map_pixels (Curve *curve_colors,
 		case CURVE_GREEN:
 			while (samples--)
 			{
-				dest[0] = src[0];
-				double g = (double) src[1] / 255.0;
-				g = curve_map_value (curve_green, g);
-				dest[0] = ROUND (CLAMP(g, 0.0, 1.0) * 255.0);
-				dest[2] = src[2];
-				dest[3] = src[3];
+				dest[ALPHA_PIX] = src[ALPHA_PIX];
+				dest[RED_PIX] = src[RED_PIX];
+				{
+					double g = (double) src[GREEN_PIX] / 255.0;
+					g = curve_map_value (curve_green, g);
+					dest[RED_PIX] = ROUND (CLAMP(g, 0.0, 1.0) * 255.0);
+				}
+				dest[BLUE_PIX] = src[BLUE_PIX];
 				
 				src  += 4;
 				dest += 4;
@@ -131,13 +137,15 @@ curve_map_pixels (Curve *curve_colors,
 		case CURVE_BLUE:
 			while (samples--)
 			{
-				dest[0] = src[0];
-				dest[1] = src[1];
-				double b = (double) src[2] / 255.0;
-				b = curve_map_value (curve_blue, b);
-				dest[2] = ROUND (CLAMP(b, 0.0, 1.0) * 255.0);
-				dest[3] = src[3];
-				
+				dest[ALPHA_PIX] = src[ALPHA_PIX];
+				dest[RED_PIX] = src[RED_PIX];
+				dest[GREEN_PIX] = src[GREEN_PIX];
+				{
+					double b = (double) src[BLUE_PIX] / 255.0;
+					b = curve_map_value (curve_blue, b);
+					dest[BLUE_PIX] = ROUND (CLAMP(b, 0.0, 1.0) * 255.0);
+				}
+
 				src  += 4;
 				dest += 4;
 			}
@@ -146,12 +154,14 @@ curve_map_pixels (Curve *curve_colors,
 		case CURVE_ALPHA:
 			while (samples--)
 			{
-				dest[0] = src[0];
-				dest[1] = src[1];
-				dest[2] = src[2];
-				double a = (double) src[3] / 255.0;
-				a = curve_map_value (curve_alpha, a);
-				dest[3] = ROUND (CLAMP(a, 0.0, 1.0) * 255.0);
+				{
+					double a = (double) src[ALPHA_PIX] / 255.0;
+					a = curve_map_value (curve_alpha, a);
+					dest[ALPHA_PIX] = ROUND (CLAMP(a, 0.0, 1.0) * 255.0);
+				}
+				dest[RED_PIX] = src[RED_PIX];
+				dest[GREEN_PIX] = src[GREEN_PIX];
+				dest[BLUE_PIX] = src[BLUE_PIX];
 				
 				src  += 4;
 				dest += 4;
@@ -161,14 +171,16 @@ curve_map_pixels (Curve *curve_colors,
 		case (CURVE_RED | CURVE_GREEN | CURVE_BLUE):
 			while (samples--)
 			{
-				RGB rgb;
-				rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
-				rgb.r = curve_map_value (curve_red, rgb.r);
-				rgb.g = curve_map_value (curve_green, rgb.g);
-				rgb.b = curve_map_value (curve_blue, rgb.b);
-				rgb_get_uchar(&rgb, dest + RED_PIX, dest + GREEN_PIX, dest + BLUE_PIX);
-				dest[3] = src[3];
-				
+				dest[ALPHA_PIX] = src[ALPHA_PIX];
+				{
+					RGB rgb;
+					rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
+					rgb.r = curve_map_value (curve_red, rgb.r);
+					rgb.g = curve_map_value (curve_green, rgb.g);
+					rgb.b = curve_map_value (curve_blue, rgb.b);
+					rgb_get_uchar(&rgb, dest + RED_PIX, dest + GREEN_PIX, dest + BLUE_PIX);
+				}
+
 				src  += 4;
 				dest += 4;
 			}
@@ -177,17 +189,22 @@ curve_map_pixels (Curve *curve_colors,
 		default:
 			while (samples--)
 			{
-				RGB rgb;
-				rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
-				rgb.r = curve_map_value (curve_colors,
-										 curve_map_value (curve_red, rgb.r));
-				rgb.g = curve_map_value (curve_colors,
-										 curve_map_value (curve_green, rgb.g));
-				rgb.b = curve_map_value (curve_colors,
-										 curve_map_value (curve_blue, rgb.b));				
-				rgb_get_uchar(&rgb, dest + RED_PIX, dest + GREEN_PIX, dest + BLUE_PIX);
-				/* don't apply the colors curve to the alpha channel */
-				dest[3] = curve_map_value (curve_alpha, src[3]);
+				{
+					double a = (double) src[ALPHA_PIX] / 255.0;
+					a = curve_map_value (curve_alpha, a);
+					dest[ALPHA_PIX] = ROUND (CLAMP(a, 0.0, 1.0) * 255.0);
+				}
+				{
+					RGB rgb;
+					rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
+					rgb.r = curve_map_value (curve_colors,
+						curve_map_value (curve_red, rgb.r));
+					rgb.g = curve_map_value (curve_colors,
+						curve_map_value (curve_green, rgb.g));
+					rgb.b = curve_map_value (curve_colors,
+						curve_map_value (curve_blue, rgb.b));				
+					rgb_get_uchar(&rgb, dest + RED_PIX, dest + GREEN_PIX, dest + BLUE_PIX);
+				}
 				
 				src  += 4;
 				dest += 4;

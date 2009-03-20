@@ -81,15 +81,17 @@ operation_levels (void                *in_buf,
 			
 			dest[channel] = ROUND (CLAMP (value, 0.0, 1.0) * 255.0);
         }
-		
-		double value = levels_map ((double)src[ALPHA_PIX] / 255.0,
-							inv_gamma[HISTOGRAM_ALPHA],
-							config->low_input[HISTOGRAM_ALPHA],
-							config->high_input[HISTOGRAM_ALPHA],
-							config->low_output[HISTOGRAM_ALPHA],
-							config->high_output[HISTOGRAM_ALPHA]);
-		dest[ALPHA_PIX] = ROUND (CLAMP (value, 0.0, 1.0) * 255.0);
-		
+
+		{		
+			double value = levels_map ((double)src[ALPHA_PIX] / 255.0,
+				inv_gamma[HISTOGRAM_ALPHA],
+				config->low_input[HISTOGRAM_ALPHA],
+				config->high_input[HISTOGRAM_ALPHA],
+				config->low_output[HISTOGRAM_ALPHA],
+				config->high_output[HISTOGRAM_ALPHA]);
+			dest[ALPHA_PIX] = ROUND (CLAMP (value, 0.0, 1.0) * 255.0);
+		}
+
 		src  += 4;
 		dest += 4;
     }

@@ -92,8 +92,9 @@ operation_brightness_contrast (void                 *in_buf,
 					 long                 samples, 
 					 const Config         *config)
 {
+	int i;
 	levels_config l_config;
-	for (int i = 0; i < 5; i++) {
+	for (i = 0; i < 5; i++) {
 		l_config.gamma[i] = 1.0;
 		l_config.low_input[i] = 0.0;
 		l_config.high_input[i] = 1.0;
