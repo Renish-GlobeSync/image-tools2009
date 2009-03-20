@@ -24,10 +24,11 @@ operation_colorize (void                *in_buf,
 	while (samples--)
     {
 		RGB rgb;
+		double  lum;
 		
 		rgb_set_uchar(&rgb, src[RED_PIX], src[GREEN_PIX], src[BLUE_PIX]);
-		double  lum = RGB_LUMINANCE (rgb.r, rgb.g, rgb.b);
-		
+		lum = RGB_LUMINANCE (rgb.r, rgb.g, rgb.b);
+
 		if (config->lightness > 0)
         {
 			lum = lum * (1.0 - config->lightness);

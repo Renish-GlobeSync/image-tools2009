@@ -9,6 +9,9 @@
 #include "colorspace.h"
 #include "rgb.h"
 
+#if WIN32
+#define strcasecmp stricmp
+#endif
 
 static char    * rgb_parse_strip         (const char *str,
                                                 int         len);
