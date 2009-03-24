@@ -16,3 +16,5 @@ typedef struct {
 } color_balance_config;
 
 bool operation_color_balance(void * in_buf, void * out_buf, long samples, const color_balance_config * config);
+
+bool operation_color_balance_optimize(void * in_buf, void * out_buf, long samples, const color_balance_config * config);
