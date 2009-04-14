@@ -305,7 +305,7 @@ gimp_toplevel_directory (void)
     toplevel = filename;
   }
 #else
-  toplevel = _gimp_reloc_find_prefix (PREFIX);
+  //toplevel = _gimp_reloc_find_prefix (PREFIX);
 #endif
 
   return toplevel;
@@ -561,20 +561,20 @@ gimp_path_runtime_fix (gchar **path)
       g_free (p);
     }
 #else
-  gchar *p;
+//  gchar *p;
 
-  if (strncmp (*path, PREFIX G_DIR_SEPARATOR_S,
-               strlen (PREFIX G_DIR_SEPARATOR_S)) == 0)
-    {
+ // if (strncmp (*path, PREFIX G_DIR_SEPARATOR_S,
+     //          strlen (PREFIX G_DIR_SEPARATOR_S)) == 0)
+   // {
       /* This is a compile-time entry. Replace the path with the
        * real one on this machine.
        */
-      p = *path;
-      *path = g_build_filename (gimp_toplevel_directory (),
-                                *path + strlen (PREFIX G_DIR_SEPARATOR_S),
-                                NULL);
-      g_free (p);
-    }
+     // p = *path;
+     // *path = g_build_filename (gimp_toplevel_directory (),
+       //                         *path + strlen (PREFIX G_DIR_SEPARATOR_S),
+         //                       NULL);
+      //g_free (p);
+    //}
 #endif
 }
 

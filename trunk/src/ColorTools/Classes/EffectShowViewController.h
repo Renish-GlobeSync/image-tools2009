@@ -19,6 +19,9 @@
 #import "operationcurves.h"
 #import "operationposterize.h"
 
+#import <libgimp/gimp.h>
+#import "convolution_matrix.h"
+
 @interface EffectShowViewController : UIViewController {
 	UIImageView *ivImage;
 	UITextView *tvDesp;
@@ -35,6 +38,7 @@
 	curves_config cv_config;
 	posterize_config p_config;
 	//
+	convolution_matrix_config config_convolution_matrix;
 
 }
 - (void)setupWithType:(int)stype;
@@ -42,6 +46,9 @@
 UIImage * ImageTools(UIImage * image, 
 					 int (* operation)(void * in_buf, void * out_buf, long samples, void * config), 
 					 void * config);
+UIImage * Filters(UIImage * image, 
+				  int (* operation)(void * in_buf, void * out_buf, long width, long height, void * config), 
+				  void * config);
 @property(nonatomic,retain)UIImageView *ivImage;
 @property(nonatomic,retain)UITextView *tvDesp;
 @property(nonatomic,retain)NSString *colorToolType;

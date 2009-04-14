@@ -30,6 +30,50 @@
 		DA2D96AE0F65792900164501 /* rgb-parse.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2D969C0F65792900164501 /* rgb-parse.c */; };
 		DA2D96AF0F65792900164501 /* rgb.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2D969D0F65792900164501 /* rgb.c */; };
 		DA2D96B00F65792900164501 /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2D969F0F65792900164501 /* vector.c */; };
+		DAA4A2A20F937C1C00AA6564 /* cartoon.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2620F937C1C00AA6564 /* cartoon.c */; };
+		DAA4A2A30F937C1C00AA6564 /* convolution-matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2650F937C1C00AA6564 /* convolution-matrix.c */; };
+		DAA4A2A40F937C1C00AA6564 /* deinterlace.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2670F937C1C00AA6564 /* deinterlace.c */; };
+		DAA4A2A60F937C1C00AA6564 /* lens-distortion.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A26B0F937C1C00AA6564 /* lens-distortion.c */; };
+		DAA4A2A70F937C1C00AA6564 /* lens-flare.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A26D0F937C1C00AA6564 /* lens-flare.c */; };
+		DAA4A2A80F937C1C00AA6564 /* gimp.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2700F937C1C00AA6564 /* gimp.c */; };
+		DAA4A2A90F937C1C00AA6564 /* gimpcontext_pdb.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2710F937C1C00AA6564 /* gimpcontext_pdb.c */; };
+		DAA4A2AA0F937C1C00AA6564 /* gimpdrawable.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2720F937C1C00AA6564 /* gimpdrawable.c */; };
+		DAA4A2AB0F937C1C00AA6564 /* gimpdrawable_pdb.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2740F937C1C00AA6564 /* gimpdrawable_pdb.c */; };
+		DAA4A2AC0F937C1C00AA6564 /* gimpenums.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2750F937C1C00AA6564 /* gimpenums.c */; };
+		DAA4A2AD0F937C1C00AA6564 /* gimpmessage_pdb.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2760F937C1C00AA6564 /* gimpmessage_pdb.c */; };
+		DAA4A2AE0F937C1C00AA6564 /* gimpparasite_pdb.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2770F937C1C00AA6564 /* gimpparasite_pdb.c */; };
+		DAA4A2AF0F937C1C00AA6564 /* gimppixelfetcher.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2780F937C1C00AA6564 /* gimppixelfetcher.c */; };
+		DAA4A2B00F937C1C00AA6564 /* gimppixelrgn.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2790F937C1C00AA6564 /* gimppixelrgn.c */; };
+		DAA4A2B10F937C1C00AA6564 /* gimpprogress.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A27A0F937C1C00AA6564 /* gimpprogress.c */; };
+		DAA4A2B20F937C1C00AA6564 /* gimpregioniterator.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A27B0F937C1C00AA6564 /* gimpregioniterator.c */; };
+		DAA4A2B30F937C1C00AA6564 /* gimptile.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A27C0F937C1C00AA6564 /* gimptile.c */; };
+		DAA4A2B40F937C1C00AA6564 /* gimpunit_pdb.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A27D0F937C1C00AA6564 /* gimpunit_pdb.c */; };
+		DAA4A2B50F937C1C00AA6564 /* gimpunitcache.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A27E0F937C1C00AA6564 /* gimpunitcache.c */; };
+		DAA4A2B60F937C1C00AA6564 /* gimpbase-private.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2800F937C1C00AA6564 /* gimpbase-private.c */; };
+		DAA4A2B70F937C1C00AA6564 /* gimpbasetypes.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2810F937C1C00AA6564 /* gimpbasetypes.c */; };
+		DAA4A2B80F937C1C00AA6564 /* gimpenv.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2820F937C1C00AA6564 /* gimpenv.c */; };
+		DAA4A2B90F937C1C00AA6564 /* gimpparasite.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2830F937C1C00AA6564 /* gimpparasite.c */; };
+		DAA4A2BA0F937C1C00AA6564 /* gimpprotocol.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2840F937C1C00AA6564 /* gimpprotocol.c */; };
+		DAA4A2BB0F937C1C00AA6564 /* gimpreloc.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2850F937C1C00AA6564 /* gimpreloc.c */; };
+		DAA4A2BC0F937C1C00AA6564 /* gimpwire.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2860F937C1C00AA6564 /* gimpwire.c */; };
+		DAA4A2BD0F937C1C00AA6564 /* gimpbilinear.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2880F937C1C00AA6564 /* gimpbilinear.c */; };
+		DAA4A2BE0F937C1C00AA6564 /* gimpcolorspace.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2890F937C1C00AA6564 /* gimpcolorspace.c */; };
+		DAA4A2BF0F937C1C00AA6564 /* gimprgb.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A28A0F937C1C00AA6564 /* gimprgb.c */; };
+		DAA4A2C00F937C1C00AA6564 /* gimpvector.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A28C0F937C1C00AA6564 /* gimpvector.c */; };
+		DAA4A2C10F937C1C00AA6564 /* nl-filter.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A28D0F937C1C00AA6564 /* nl-filter.c */; };
+		DAA4A2C20F937C1C00AA6564 /* nova.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A28F0F937C1C00AA6564 /* nova.c */; };
+		DAA4A2C30F937C1C00AA6564 /* oilify.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2910F937C1C00AA6564 /* oilify.c */; };
+		DAA4A2C40F937C1C00AA6564 /* pagecurl.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2940F937C1C00AA6564 /* pagecurl.c */; };
+		DAA4A2C50F937C1C00AA6564 /* red-eye-removal.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2960F937C1C00AA6564 /* red-eye-removal.c */; };
+		DAA4A2C60F937C1C00AA6564 /* sharpen.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2980F937C1C00AA6564 /* sharpen.c */; };
+		DAA4A2C70F937C1C00AA6564 /* softglow.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A29A0F937C1C00AA6564 /* softglow.c */; };
+		DAA4A2C80F937C1C00AA6564 /* unsharp-mask.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A29C0F937C1C00AA6564 /* unsharp-mask.c */; };
+		DAA4A2C90F937C1C00AA6564 /* value-propagate.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A29E0F937C1C00AA6564 /* value-propagate.c */; };
+		DAA4A2CA0F937C1C00AA6564 /* whirl-pinch.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2A00F937C1C00AA6564 /* whirl-pinch.c */; };
+		DAA4A2EF0F938E8300AA6564 /* GLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA4A2EE0F938E8300AA6564 /* GLib.framework */; };
+		DAA4A2F30F938E9400AA6564 /* Gtk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA4A2F20F938E9400AA6564 /* Gtk.framework */; };
+		DAA4A2F70F938EA100AA6564 /* Cairo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA4A2F60F938EA100AA6564 /* Cairo.framework */; };
+		DAA4A3870F9390F100AA6564 /* lens-apply.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2690F937C1C00AA6564 /* lens-apply.c */; };
 		E89E32E20F64B059007F75C9 /* ColorToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89E32E10F64B059007F75C9 /* ColorToolViewController.m */; };
 		E89E32E90F64B1ED007F75C9 /* EffectShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89E32E80F64B1ED007F75C9 /* EffectShowViewController.m */; };
 		E89E33880F64CC76007F75C9 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = E89E33870F64CC76007F75C9 /* sample.png */; };
@@ -82,6 +126,69 @@
 		DA2D969E0F65792900164501 /* rgb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rgb.h; sourceTree = "<group>"; };
 		DA2D969F0F65792900164501 /* vector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vector.c; sourceTree = "<group>"; };
 		DA2D96A00F65792900164501 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		DAA4A2620F937C1C00AA6564 /* cartoon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cartoon.c; path = Filters/cartoon.c; sourceTree = "<group>"; };
+		DAA4A2630F937C1C00AA6564 /* cartoon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cartoon.h; path = Filters/cartoon.h; sourceTree = "<group>"; };
+		DAA4A2640F937C1C00AA6564 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = Filters/config.h; sourceTree = "<group>"; };
+		DAA4A2650F937C1C00AA6564 /* convolution-matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "convolution-matrix.c"; path = "Filters/convolution-matrix.c"; sourceTree = "<group>"; };
+		DAA4A2660F937C1C00AA6564 /* convolution_matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = convolution_matrix.h; path = Filters/convolution_matrix.h; sourceTree = "<group>"; };
+		DAA4A2670F937C1C00AA6564 /* deinterlace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = deinterlace.c; path = Filters/deinterlace.c; sourceTree = "<group>"; };
+		DAA4A2680F937C1C00AA6564 /* deinterlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deinterlace.h; path = Filters/deinterlace.h; sourceTree = "<group>"; };
+		DAA4A2690F937C1C00AA6564 /* lens-apply.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "lens-apply.c"; path = "Filters/lens-apply.c"; sourceTree = "<group>"; };
+		DAA4A26A0F937C1C00AA6564 /* lens-apply.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "lens-apply.h"; path = "Filters/lens-apply.h"; sourceTree = "<group>"; };
+		DAA4A26B0F937C1C00AA6564 /* lens-distortion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "lens-distortion.c"; path = "Filters/lens-distortion.c"; sourceTree = "<group>"; };
+		DAA4A26C0F937C1C00AA6564 /* lens-distortion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "lens-distortion.h"; path = "Filters/lens-distortion.h"; sourceTree = "<group>"; };
+		DAA4A26D0F937C1C00AA6564 /* lens-flare.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "lens-flare.c"; path = "Filters/lens-flare.c"; sourceTree = "<group>"; };
+		DAA4A26E0F937C1C00AA6564 /* lens-flare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "lens-flare.h"; path = "Filters/lens-flare.h"; sourceTree = "<group>"; };
+		DAA4A2700F937C1C00AA6564 /* gimp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimp.c; sourceTree = "<group>"; };
+		DAA4A2710F937C1C00AA6564 /* gimpcontext_pdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpcontext_pdb.c; sourceTree = "<group>"; };
+		DAA4A2720F937C1C00AA6564 /* gimpdrawable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpdrawable.c; sourceTree = "<group>"; };
+		DAA4A2730F937C1C00AA6564 /* gimpdrawable.H */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = gimpdrawable.H; sourceTree = "<group>"; };
+		DAA4A2740F937C1C00AA6564 /* gimpdrawable_pdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpdrawable_pdb.c; sourceTree = "<group>"; };
+		DAA4A2750F937C1C00AA6564 /* gimpenums.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpenums.c; sourceTree = "<group>"; };
+		DAA4A2760F937C1C00AA6564 /* gimpmessage_pdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpmessage_pdb.c; sourceTree = "<group>"; };
+		DAA4A2770F937C1C00AA6564 /* gimpparasite_pdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpparasite_pdb.c; sourceTree = "<group>"; };
+		DAA4A2780F937C1C00AA6564 /* gimppixelfetcher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimppixelfetcher.c; sourceTree = "<group>"; };
+		DAA4A2790F937C1C00AA6564 /* gimppixelrgn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimppixelrgn.c; sourceTree = "<group>"; };
+		DAA4A27A0F937C1C00AA6564 /* gimpprogress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpprogress.c; sourceTree = "<group>"; };
+		DAA4A27B0F937C1C00AA6564 /* gimpregioniterator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpregioniterator.c; sourceTree = "<group>"; };
+		DAA4A27C0F937C1C00AA6564 /* gimptile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimptile.c; sourceTree = "<group>"; };
+		DAA4A27D0F937C1C00AA6564 /* gimpunit_pdb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpunit_pdb.c; sourceTree = "<group>"; };
+		DAA4A27E0F937C1C00AA6564 /* gimpunitcache.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpunitcache.c; sourceTree = "<group>"; };
+		DAA4A2800F937C1C00AA6564 /* gimpbase-private.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "gimpbase-private.c"; sourceTree = "<group>"; };
+		DAA4A2810F937C1C00AA6564 /* gimpbasetypes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpbasetypes.c; sourceTree = "<group>"; };
+		DAA4A2820F937C1C00AA6564 /* gimpenv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpenv.c; sourceTree = "<group>"; };
+		DAA4A2830F937C1C00AA6564 /* gimpparasite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpparasite.c; sourceTree = "<group>"; };
+		DAA4A2840F937C1C00AA6564 /* gimpprotocol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpprotocol.c; sourceTree = "<group>"; };
+		DAA4A2850F937C1C00AA6564 /* gimpreloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpreloc.c; sourceTree = "<group>"; };
+		DAA4A2860F937C1C00AA6564 /* gimpwire.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpwire.c; sourceTree = "<group>"; };
+		DAA4A2880F937C1C00AA6564 /* gimpbilinear.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpbilinear.c; sourceTree = "<group>"; };
+		DAA4A2890F937C1C00AA6564 /* gimpcolorspace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpcolorspace.c; sourceTree = "<group>"; };
+		DAA4A28A0F937C1C00AA6564 /* gimprgb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimprgb.c; sourceTree = "<group>"; };
+		DAA4A28C0F937C1C00AA6564 /* gimpvector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gimpvector.c; sourceTree = "<group>"; };
+		DAA4A28D0F937C1C00AA6564 /* nl-filter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "nl-filter.c"; path = "Filters/nl-filter.c"; sourceTree = "<group>"; };
+		DAA4A28E0F937C1C00AA6564 /* nl-filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "nl-filter.h"; path = "Filters/nl-filter.h"; sourceTree = "<group>"; };
+		DAA4A28F0F937C1C00AA6564 /* nova.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nova.c; path = Filters/nova.c; sourceTree = "<group>"; };
+		DAA4A2900F937C1C00AA6564 /* nova.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nova.h; path = Filters/nova.h; sourceTree = "<group>"; };
+		DAA4A2910F937C1C00AA6564 /* oilify.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = oilify.c; path = Filters/oilify.c; sourceTree = "<group>"; };
+		DAA4A2920F937C1C00AA6564 /* oilify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = oilify.h; path = Filters/oilify.h; sourceTree = "<group>"; };
+		DAA4A2930F937C1C00AA6564 /* pagecurl-icons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "pagecurl-icons.h"; path = "Filters/pagecurl-icons.h"; sourceTree = "<group>"; };
+		DAA4A2940F937C1C00AA6564 /* pagecurl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pagecurl.c; path = Filters/pagecurl.c; sourceTree = "<group>"; };
+		DAA4A2950F937C1C00AA6564 /* pagecurl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pagecurl.h; path = Filters/pagecurl.h; sourceTree = "<group>"; };
+		DAA4A2960F937C1C00AA6564 /* red-eye-removal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "red-eye-removal.c"; path = "Filters/red-eye-removal.c"; sourceTree = "<group>"; };
+		DAA4A2970F937C1C00AA6564 /* red-eye-removal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "red-eye-removal.h"; path = "Filters/red-eye-removal.h"; sourceTree = "<group>"; };
+		DAA4A2980F937C1C00AA6564 /* sharpen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sharpen.c; path = Filters/sharpen.c; sourceTree = "<group>"; };
+		DAA4A2990F937C1C00AA6564 /* sharpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sharpen.h; path = Filters/sharpen.h; sourceTree = "<group>"; };
+		DAA4A29A0F937C1C00AA6564 /* softglow.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = softglow.c; path = Filters/softglow.c; sourceTree = "<group>"; };
+		DAA4A29B0F937C1C00AA6564 /* softglow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = softglow.h; path = Filters/softglow.h; sourceTree = "<group>"; };
+		DAA4A29C0F937C1C00AA6564 /* unsharp-mask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "unsharp-mask.c"; path = "Filters/unsharp-mask.c"; sourceTree = "<group>"; };
+		DAA4A29D0F937C1C00AA6564 /* unsharp_mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unsharp_mask.h; path = Filters/unsharp_mask.h; sourceTree = "<group>"; };
+		DAA4A29E0F937C1C00AA6564 /* value-propagate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "value-propagate.c"; path = "Filters/value-propagate.c"; sourceTree = "<group>"; };
+		DAA4A29F0F937C1C00AA6564 /* value-propagate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "value-propagate.h"; path = "Filters/value-propagate.h"; sourceTree = "<group>"; };
+		DAA4A2A00F937C1C00AA6564 /* whirl-pinch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "whirl-pinch.c"; path = "Filters/whirl-pinch.c"; sourceTree = "<group>"; };
+		DAA4A2A10F937C1C00AA6564 /* whirl-pinch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "whirl-pinch.h"; path = "Filters/whirl-pinch.h"; sourceTree = "<group>"; };
+		DAA4A2EE0F938E8300AA6564 /* GLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLib.framework; path = /Library/Frameworks/GLib.framework; sourceTree = "<absolute>"; };
+		DAA4A2F20F938E9400AA6564 /* Gtk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gtk.framework; path = /Library/Frameworks/Gtk.framework; sourceTree = "<absolute>"; };
+		DAA4A2F60F938EA100AA6564 /* Cairo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cairo.framework; path = /Library/Frameworks/Cairo.framework; sourceTree = "<absolute>"; };
 		E89E32E00F64B059007F75C9 /* ColorToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorToolViewController.h; sourceTree = "<group>"; };
 		E89E32E10F64B059007F75C9 /* ColorToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorToolViewController.m; sourceTree = "<group>"; };
 		E89E32E70F64B1ED007F75C9 /* EffectShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectShowViewController.h; sourceTree = "<group>"; };
@@ -97,6 +204,9 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				DAA4A2EF0F938E8300AA6564 /* GLib.framework in Frameworks */,
+				DAA4A2F30F938E9400AA6564 /* Gtk.framework in Frameworks */,
+				DAA4A2F70F938EA100AA6564 /* Cairo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +237,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				DAA4A2610F937BA300AA6564 /* Filters */,
 				DA2D967D0F65792900164501 /* Lib */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -160,6 +271,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAA4A2F60F938EA100AA6564 /* Cairo.framework */,
+				DAA4A2F20F938E9400AA6564 /* Gtk.framework */,
+				DAA4A2EE0F938E8300AA6564 /* GLib.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
@@ -207,6 +321,109 @@
 				DA2D96A00F65792900164501 /* vector.h */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		DAA4A2610F937BA300AA6564 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				DAA4A2620F937C1C00AA6564 /* cartoon.c */,
+				DAA4A2630F937C1C00AA6564 /* cartoon.h */,
+				DAA4A2640F937C1C00AA6564 /* config.h */,
+				DAA4A2650F937C1C00AA6564 /* convolution-matrix.c */,
+				DAA4A2660F937C1C00AA6564 /* convolution_matrix.h */,
+				DAA4A2670F937C1C00AA6564 /* deinterlace.c */,
+				DAA4A2680F937C1C00AA6564 /* deinterlace.h */,
+				DAA4A2690F937C1C00AA6564 /* lens-apply.c */,
+				DAA4A26A0F937C1C00AA6564 /* lens-apply.h */,
+				DAA4A26B0F937C1C00AA6564 /* lens-distortion.c */,
+				DAA4A26C0F937C1C00AA6564 /* lens-distortion.h */,
+				DAA4A26D0F937C1C00AA6564 /* lens-flare.c */,
+				DAA4A26E0F937C1C00AA6564 /* lens-flare.h */,
+				DAA4A26F0F937C1C00AA6564 /* libgimp */,
+				DAA4A27F0F937C1C00AA6564 /* libgimpbase */,
+				DAA4A2870F937C1C00AA6564 /* libgimpcolor */,
+				DAA4A28B0F937C1C00AA6564 /* libgimpmath */,
+				DAA4A28D0F937C1C00AA6564 /* nl-filter.c */,
+				DAA4A28E0F937C1C00AA6564 /* nl-filter.h */,
+				DAA4A28F0F937C1C00AA6564 /* nova.c */,
+				DAA4A2900F937C1C00AA6564 /* nova.h */,
+				DAA4A2910F937C1C00AA6564 /* oilify.c */,
+				DAA4A2920F937C1C00AA6564 /* oilify.h */,
+				DAA4A2930F937C1C00AA6564 /* pagecurl-icons.h */,
+				DAA4A2940F937C1C00AA6564 /* pagecurl.c */,
+				DAA4A2950F937C1C00AA6564 /* pagecurl.h */,
+				DAA4A2960F937C1C00AA6564 /* red-eye-removal.c */,
+				DAA4A2970F937C1C00AA6564 /* red-eye-removal.h */,
+				DAA4A2980F937C1C00AA6564 /* sharpen.c */,
+				DAA4A2990F937C1C00AA6564 /* sharpen.h */,
+				DAA4A29A0F937C1C00AA6564 /* softglow.c */,
+				DAA4A29B0F937C1C00AA6564 /* softglow.h */,
+				DAA4A29C0F937C1C00AA6564 /* unsharp-mask.c */,
+				DAA4A29D0F937C1C00AA6564 /* unsharp_mask.h */,
+				DAA4A29E0F937C1C00AA6564 /* value-propagate.c */,
+				DAA4A29F0F937C1C00AA6564 /* value-propagate.h */,
+				DAA4A2A00F937C1C00AA6564 /* whirl-pinch.c */,
+				DAA4A2A10F937C1C00AA6564 /* whirl-pinch.h */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		DAA4A26F0F937C1C00AA6564 /* libgimp */ = {
+			isa = PBXGroup;
+			children = (
+				DAA4A2700F937C1C00AA6564 /* gimp.c */,
+				DAA4A2710F937C1C00AA6564 /* gimpcontext_pdb.c */,
+				DAA4A2720F937C1C00AA6564 /* gimpdrawable.c */,
+				DAA4A2730F937C1C00AA6564 /* gimpdrawable.H */,
+				DAA4A2740F937C1C00AA6564 /* gimpdrawable_pdb.c */,
+				DAA4A2750F937C1C00AA6564 /* gimpenums.c */,
+				DAA4A2760F937C1C00AA6564 /* gimpmessage_pdb.c */,
+				DAA4A2770F937C1C00AA6564 /* gimpparasite_pdb.c */,
+				DAA4A2780F937C1C00AA6564 /* gimppixelfetcher.c */,
+				DAA4A2790F937C1C00AA6564 /* gimppixelrgn.c */,
+				DAA4A27A0F937C1C00AA6564 /* gimpprogress.c */,
+				DAA4A27B0F937C1C00AA6564 /* gimpregioniterator.c */,
+				DAA4A27C0F937C1C00AA6564 /* gimptile.c */,
+				DAA4A27D0F937C1C00AA6564 /* gimpunit_pdb.c */,
+				DAA4A27E0F937C1C00AA6564 /* gimpunitcache.c */,
+			);
+			name = libgimp;
+			path = Filters/libgimp;
+			sourceTree = "<group>";
+		};
+		DAA4A27F0F937C1C00AA6564 /* libgimpbase */ = {
+			isa = PBXGroup;
+			children = (
+				DAA4A2800F937C1C00AA6564 /* gimpbase-private.c */,
+				DAA4A2810F937C1C00AA6564 /* gimpbasetypes.c */,
+				DAA4A2820F937C1C00AA6564 /* gimpenv.c */,
+				DAA4A2830F937C1C00AA6564 /* gimpparasite.c */,
+				DAA4A2840F937C1C00AA6564 /* gimpprotocol.c */,
+				DAA4A2850F937C1C00AA6564 /* gimpreloc.c */,
+				DAA4A2860F937C1C00AA6564 /* gimpwire.c */,
+			);
+			name = libgimpbase;
+			path = Filters/libgimpbase;
+			sourceTree = "<group>";
+		};
+		DAA4A2870F937C1C00AA6564 /* libgimpcolor */ = {
+			isa = PBXGroup;
+			children = (
+				DAA4A2880F937C1C00AA6564 /* gimpbilinear.c */,
+				DAA4A2890F937C1C00AA6564 /* gimpcolorspace.c */,
+				DAA4A28A0F937C1C00AA6564 /* gimprgb.c */,
+			);
+			name = libgimpcolor;
+			path = Filters/libgimpcolor;
+			sourceTree = "<group>";
+		};
+		DAA4A28B0F937C1C00AA6564 /* libgimpmath */ = {
+			isa = PBXGroup;
+			children = (
+				DAA4A28C0F937C1C00AA6564 /* gimpvector.c */,
+			);
+			name = libgimpmath;
+			path = Filters/libgimpmath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +501,47 @@
 				DA2D96AE0F65792900164501 /* rgb-parse.c in Sources */,
 				DA2D96AF0F65792900164501 /* rgb.c in Sources */,
 				DA2D96B00F65792900164501 /* vector.c in Sources */,
+				DAA4A2A20F937C1C00AA6564 /* cartoon.c in Sources */,
+				DAA4A2A30F937C1C00AA6564 /* convolution-matrix.c in Sources */,
+				DAA4A2A40F937C1C00AA6564 /* deinterlace.c in Sources */,
+				DAA4A2A60F937C1C00AA6564 /* lens-distortion.c in Sources */,
+				DAA4A2A70F937C1C00AA6564 /* lens-flare.c in Sources */,
+				DAA4A2A80F937C1C00AA6564 /* gimp.c in Sources */,
+				DAA4A2A90F937C1C00AA6564 /* gimpcontext_pdb.c in Sources */,
+				DAA4A2AA0F937C1C00AA6564 /* gimpdrawable.c in Sources */,
+				DAA4A2AB0F937C1C00AA6564 /* gimpdrawable_pdb.c in Sources */,
+				DAA4A2AC0F937C1C00AA6564 /* gimpenums.c in Sources */,
+				DAA4A2AD0F937C1C00AA6564 /* gimpmessage_pdb.c in Sources */,
+				DAA4A2AE0F937C1C00AA6564 /* gimpparasite_pdb.c in Sources */,
+				DAA4A2AF0F937C1C00AA6564 /* gimppixelfetcher.c in Sources */,
+				DAA4A2B00F937C1C00AA6564 /* gimppixelrgn.c in Sources */,
+				DAA4A2B10F937C1C00AA6564 /* gimpprogress.c in Sources */,
+				DAA4A2B20F937C1C00AA6564 /* gimpregioniterator.c in Sources */,
+				DAA4A2B30F937C1C00AA6564 /* gimptile.c in Sources */,
+				DAA4A2B40F937C1C00AA6564 /* gimpunit_pdb.c in Sources */,
+				DAA4A2B50F937C1C00AA6564 /* gimpunitcache.c in Sources */,
+				DAA4A2B60F937C1C00AA6564 /* gimpbase-private.c in Sources */,
+				DAA4A2B70F937C1C00AA6564 /* gimpbasetypes.c in Sources */,
+				DAA4A2B80F937C1C00AA6564 /* gimpenv.c in Sources */,
+				DAA4A2B90F937C1C00AA6564 /* gimpparasite.c in Sources */,
+				DAA4A2BA0F937C1C00AA6564 /* gimpprotocol.c in Sources */,
+				DAA4A2BB0F937C1C00AA6564 /* gimpreloc.c in Sources */,
+				DAA4A2BC0F937C1C00AA6564 /* gimpwire.c in Sources */,
+				DAA4A2BD0F937C1C00AA6564 /* gimpbilinear.c in Sources */,
+				DAA4A2BE0F937C1C00AA6564 /* gimpcolorspace.c in Sources */,
+				DAA4A2BF0F937C1C00AA6564 /* gimprgb.c in Sources */,
+				DAA4A2C00F937C1C00AA6564 /* gimpvector.c in Sources */,
+				DAA4A2C10F937C1C00AA6564 /* nl-filter.c in Sources */,
+				DAA4A2C20F937C1C00AA6564 /* nova.c in Sources */,
+				DAA4A2C30F937C1C00AA6564 /* oilify.c in Sources */,
+				DAA4A2C40F937C1C00AA6564 /* pagecurl.c in Sources */,
+				DAA4A2C50F937C1C00AA6564 /* red-eye-removal.c in Sources */,
+				DAA4A2C60F937C1C00AA6564 /* sharpen.c in Sources */,
+				DAA4A2C70F937C1C00AA6564 /* softglow.c in Sources */,
+				DAA4A2C80F937C1C00AA6564 /* unsharp-mask.c in Sources */,
+				DAA4A2C90F937C1C00AA6564 /* value-propagate.c in Sources */,
+				DAA4A2CA0F937C1C00AA6564 /* whirl-pinch.c in Sources */,
+				DAA4A3870F9390F100AA6564 /* lens-apply.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +582,13 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					Filters,
+					/Library/Frameworks/Cairo.framework/Headers/,
+					/Library/Frameworks/Gtk.framework/Headers/,
+					/Library/Frameworks/GLib.framework/Headers/,
+					"/Users/YW/Documents/iPhoneApp/gimp-2.6.0",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6F012A28-9750-4172-B971-B9361125A2E5";
