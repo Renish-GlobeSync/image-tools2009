@@ -279,9 +279,9 @@ do_curl_effect (gint32 drawable_id)
   gdouble       intensity, alpha, beta;
   GimpVector2   v, dl, dr;
   gdouble       dl_mag, dr_mag, angle, factor;
-  guchar       *pp, *dest, fore_grayval, back_grayval;
+  guchar       *pp, *dest, *sp, * src, fore_grayval, back_grayval;
   guchar       *gradsamp;
-  GimpPixelRgn  dest_rgn;
+  GimpPixelRgn  dest_rgn, src_rgn;
   gpointer      pr;
   gint32        curl_layer_id;
   guchar       *grad_samples  = NULL;
@@ -306,6 +306,9 @@ do_curl_effect (gint32 drawable_id)
   //gimp_layer_set_offsets (curl_layer->drawable_id, sel_x1 + x1, sel_y1 + y1);
   //gimp_tile_cache_ntiles (2 * (curl_layer->width / gimp_tile_width () + 1));
 
+  gimp_pixel_rgn_init (&src_rgn, curl_layer,
+		       sel_x1, sel_y1, true_sel_width, true_sel_height,
+		       FALSE, FALSE);
   gimp_pixel_rgn_init (&dest_rgn, curl_layer,
 		       0, 0, true_sel_width, true_sel_height, TRUE, TRUE);
 
@@ -347,15 +350,17 @@ do_curl_effect (gint32 drawable_id)
   alpha_pos = dest_rgn.bpp - 1;
 
   /* Main loop */
-  for (pr = gimp_pixel_rgns_register (1, &dest_rgn);
+  for (pr = gimp_pixel_rgns_register (2, &dest_rgn, &src_rgn);
        pr != NULL;
        pr = gimp_pixel_rgns_process (pr))
     {
+        src = src_rgn.data;
       dest = dest_rgn.data;
 
       for (y1 = dest_rgn.y; y1 < dest_rgn.y + dest_rgn.h; y1++)
 	{
 	  pp = dest;
+      sp = src;
 	  for (x1 = dest_rgn.x; x1 < dest_rgn.x + dest_rgn.w; x1++)
 	    {
 	      /* Map coordinates to get the curl correct... */
@@ -375,7 +380,7 @@ do_curl_effect (gint32 drawable_id)
 	      if (left_of_diagl (x, y))
 		{ /* uncurled region */
 		  for (k = 0; k <= alpha_pos; k++)
-		    pp[k] = 0;
+		    pp[k] = sp[k];
 		}
 	      else if (right_of_diagr (x, y) ||
 		       (right_of_diagm (x, y) &&
@@ -397,12 +402,11 @@ do_curl_effect (gint32 drawable_id)
 		    {
 		      /* Below the curl. */
 		      factor = angle / alpha;
-		      for (k = 0; k < alpha_pos; k++)
-			pp[k] = 0;
-
 		      pp[alpha_pos] = (curl.shade ?
                                        (guchar) ((float) 255 * (float) factor) :
                                        0);
+		      for (k = 0; k < alpha_pos; k++)
+    			pp[k] = (int)sp[k] * (255 - pp[alpha_pos]) / 255;
 		    }
 		  else
 		    {
@@ -411,22 +415,22 @@ do_curl_effect (gint32 drawable_id)
                         {
                         case CURL_COLORS_FG_BG:
 			  intensity = pow (sin (G_PI * angle / alpha), 1.5);
-			  if (color_image)
-			    {
-			      pp[0] = (intensity * back_color[0] +
-                                       (1.0 - intensity) * fore_color[0]);
-			      pp[1] = (intensity * back_color[1] +
-                                       (1.0 - intensity) * fore_color[1]);
-			      pp[2] = (intensity * back_color[2] +
-                                       (1.0 - intensity) * fore_color[2]);
-			    }
-			  else
-			    pp[0] = (intensity * back_grayval +
-                                     (1 - intensity) * fore_grayval);
-
 			  pp[alpha_pos] = (guchar) ((double) 255.99 *
                                                     (1.0 - intensity *
                                                      (1.0 - curl.opacity)));
+			  if (color_image)
+			    {
+			      pp[0] = ((gdouble)sp[0] * (255.0 - pp[alpha_pos]) + (intensity * back_color[0] +
+                                       (1.0 - intensity) * fore_color[0]) * pp[alpha_pos]) / 255.0;
+			      pp[1] = ((gdouble)sp[1] * (255.0 - pp[alpha_pos]) + (intensity * back_color[1] +
+                                       (1.0 - intensity) * fore_color[1]) * pp[alpha_pos]) / 255.0;
+			      pp[2] = ((gdouble)sp[2] * (255.0 - pp[alpha_pos]) + (intensity * back_color[2] +
+                                       (1.0 - intensity) * fore_color[2]) * pp[alpha_pos]) / 255.0;
+			    }
+			  else
+			    pp[0] = ((gdouble)sp[0] * (255.0 - pp[alpha_pos]) + (intensity * back_grayval +
+                                     (1 - intensity) * fore_grayval) * pp[alpha_pos]) / 255.0;
+
                           break;
 
                         case CURL_COLORS_GRADIENT:
@@ -457,8 +461,10 @@ do_curl_effect (gint32 drawable_id)
                         }
 		    }
 		}
+          sp += src_rgn.bpp;
 	      pp += dest_rgn.bpp;
 	    }
+        src += src_rgn.rowstride;
 	  dest += dest_rgn.rowstride;
 	}
       progress += dest_rgn.w * dest_rgn.h;
@@ -469,7 +475,7 @@ do_curl_effect (gint32 drawable_id)
   gimp_drawable_merge_shadow (curl_layer->drawable_id, FALSE);
   gimp_drawable_update (curl_layer->drawable_id,
 			0, 0, curl_layer->width, curl_layer->height);
-  gimp_drawable_detach (curl_layer);
+  //gimp_drawable_detach (curl_layer);
 
   g_free (grad_samples);
 
@@ -584,7 +590,7 @@ page_curl (gint32 drawable_id)
 
   curl_layer_id = do_curl_effect (drawable_id);
 
-  clear_curled_region (drawable_id);
+    //clear_curled_region (drawable_id);
 
   //gimp_image_undo_group_end (image_id);
 
