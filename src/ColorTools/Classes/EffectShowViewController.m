@@ -173,6 +173,13 @@
 			p_config.levels = 2;
 			imageNew = ImageTools(originalImage, operation_posterize, &p_config);
 			ivImage.image = imageNew;
+			
+			config_convolution_matrix = convolution_matrix_default_config;
+			config_convolution_matrix.matrix[2][1] = -1;
+			config_convolution_matrix.matrix[2][2] = 1;
+
+			imageNew = Filters(originalImage, operation_convolution_matrix, &config_convolution_matrix);
+
 			break;
 		default:
 			break;
@@ -205,6 +212,38 @@ UIImage * ImageTools(UIImage * image,
 	CGContextDrawImage(context, rect, image.CGImage);
 	
 	operation(data, data, width * height, config);
+	
+	CGImageRef cgImage = CGBitmapContextCreateImage(context);
+	return [[[UIImage alloc] initWithCGImage: cgImage] autorelease];
+	
+}
+
+
+UIImage * Filters(UIImage * image, 
+					 int (* operation)(void * in_buf, void * out_buf, long width, long height, void * config), 
+					 void * config)
+{
+	CGSize imageSize = image.size;
+	size_t width = imageSize.width;
+	size_t height = imageSize.height;
+	void * data = 0;
+	//size_t const bitPerPerComponent = sizeof(float) * 8;
+	size_t const bitPerPerComponent = sizeof(char) * 8;
+	size_t bytesPerRow = width * (bitPerPerComponent * 4 / 8);
+	CGColorSpaceRef colorspace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
+	//CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+	CGContextRef context;
+	if (colorspace == NULL)
+		return NULL;
+	data = malloc(bytesPerRow * height);
+	
+	context = CGBitmapContextCreate(data, width, height, bitPerPerComponent, bytesPerRow, colorspace, 
+									kCGImageAlphaLast);
+	
+	CGRect rect = {{0, 0}, {width, height}};
+	CGContextDrawImage(context, rect, image.CGImage);
+	
+	operation(data, data, width, height, config);
 	
 	CGImageRef cgImage = CGBitmapContextCreateImage(context);
 	return [[[UIImage alloc] initWithCGImage: cgImage] autorelease];
