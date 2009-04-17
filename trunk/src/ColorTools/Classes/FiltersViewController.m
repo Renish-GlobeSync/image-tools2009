@@ -58,27 +58,27 @@
 	 3. Oilify
 	 */
 	filters = [[NSMutableArray alloc] init];
-	[filters addObject:@"General Filters -- Convolution Matrix"];
-	[filters addObject:@"General Filters -- Dilate"];
-	[filters addObject:@"General Filters -- Erode"];
+	[filters addObject:@"General -- Convolution Matrix"];
+	[filters addObject:@"General -- Dilate"];
+	[filters addObject:@"General -- Erode"];
 	//
-	[filters addObject:@"Enhance Filters -- Deinterface"];
-	[filters addObject:@"Enhance Filters -- NL Filter"];
-	[filters addObject:@"Enhance Filters -- Red Eye Removal"];
-	[filters addObject:@"Enhance Filters -- UnSharpen  Mask"];
-	[filters addObject:@"Enhance Filters -- Sharpen"];
+	[filters addObject:@"Enhance -- Deinterlace"];
+	[filters addObject:@"Enhance -- NL Filter"];
+	[filters addObject:@"Enhance -- Red Eye Removal"];
+	[filters addObject:@"Enhance -- UnSharpen  Mask"];
+	[filters addObject:@"Enhance -- Sharpen"];
 	//
-	[filters addObject:@"Light and Shadow Filters -- Lens Flare"];
-	[filters addObject:@"Light and Shadow Filters -- Supernova"];
-	[filters addObject:@"Light and Shadow Filters -- Apply Lens"];
+	[filters addObject:@"Light and Shadow -- Lens Flare"];
+	[filters addObject:@"Light and Shadow -- Supernova"];
+	[filters addObject:@"Light and Shadow -- Apply Lens"];
 	//
-	[filters addObject:@"Distort Filters -- Page Curl"];
-	[filters addObject:@"Distort Filters -- Lens Distortion"];
-	[filters addObject:@"Distort Filters -- Whirl and Pinch"];
+	[filters addObject:@"Distort -- Page Curl"];
+	[filters addObject:@"Distort -- Lens Distortion"];
+	[filters addObject:@"Distort -- Whirl and Pinch"];
 	//
-	[filters addObject:@"Artistic Filter -- Cartoon"];
-	[filters addObject:@"Artistic Filter -- Soft Glow"];
-	[filters addObject:@"Artistic Filter -- Oilify"];
+	[filters addObject:@"Artistic -- Cartoon"];
+	[filters addObject:@"Artistic -- Soft Glow"];
+	[filters addObject:@"Artistic -- Oilify"];
 }
 
 
