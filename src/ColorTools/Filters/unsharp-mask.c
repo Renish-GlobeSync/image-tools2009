@@ -23,9 +23,6 @@
 #include <stdlib.h>
 
 #include <libgimp/gimp.h>
-#include <libgimp/gimpui.h>
-
-#include "libgimp/stdplugins-intl.h"
 
 #include "unsharp_mask.h"
 
@@ -37,7 +34,6 @@
  */
 
 /*  #define TIMER  */
-
 
 
 static void      blur_line           (const gdouble  *ctable,

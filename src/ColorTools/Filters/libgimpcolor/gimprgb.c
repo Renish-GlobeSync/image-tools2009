@@ -36,41 +36,28 @@
 static GimpRGB * gimp_rgb_copy (const GimpRGB *rgb);
 
 
-GType
-gimp_rgb_get_type (void)
-{
-  static GType rgb_type = 0;
-
-  if (!rgb_type)
-    rgb_type = g_boxed_type_register_static ("GimpRGB",
-                                             (GBoxedCopyFunc) gimp_rgb_copy,
-                                             (GBoxedFreeFunc) g_free);
-
-  return rgb_type;
-}
-
-void
-gimp_value_get_rgb (const GValue *value,
-                    GimpRGB      *rgb)
-{
-  g_return_if_fail (GIMP_VALUE_HOLDS_RGB (value));
-  g_return_if_fail (rgb != NULL);
-
-  if (value->data[0].v_pointer)
-    *rgb = *((GimpRGB *) value->data[0].v_pointer);
-  else
-    gimp_rgba_set (rgb, 0.0, 0.0, 0.0, 1.0);
-}
-
-void
-gimp_value_set_rgb (GValue        *value,
-                    const GimpRGB *rgb)
-{
-  g_return_if_fail (GIMP_VALUE_HOLDS_RGB (value));
-  g_return_if_fail (rgb != NULL);
-
-  g_value_set_boxed (value, rgb);
-}
+//void
+//gimp_value_get_rgb (const GValue *value,
+//                    GimpRGB      *rgb)
+//{
+//  g_return_if_fail (GIMP_VALUE_HOLDS_RGB (value));
+//  g_return_if_fail (rgb != NULL);
+//
+//  if (value->data[0].v_pointer)
+//    *rgb = *((GimpRGB *) value->data[0].v_pointer);
+//  else
+//    gimp_rgba_set (rgb, 0.0, 0.0, 0.0, 1.0);
+//}
+//
+//void
+//gimp_value_set_rgb (GValue        *value,
+//                    const GimpRGB *rgb)
+//{
+//  g_return_if_fail (GIMP_VALUE_HOLDS_RGB (value));
+//  g_return_if_fail (rgb != NULL);
+//
+//  g_value_set_boxed (value, rgb);
+//}
 
 static GimpRGB *
 gimp_rgb_copy (const GimpRGB *rgb)
@@ -521,67 +508,6 @@ static gint       gimp_param_rgb_values_cmp  (GParamSpec      *pspec,
                                               const GValue    *value1,
                                               const GValue    *value2);
 
-/**
- * gimp_param_rgb_get_type:
- *
- * Reveals the object type
- *
- * Returns: the #GType for a GimpParamRGB object
- *
- * Since: GIMP 2.4
- **/
-GType
-gimp_param_rgb_get_type (void)
-{
-  static GType spec_type = 0;
-
-  if (! spec_type)
-    {
-      const GTypeInfo type_info =
-      {
-        sizeof (GParamSpecClass),
-        NULL, NULL,
-        (GClassInitFunc) gimp_param_rgb_class_init,
-        NULL, NULL,
-        sizeof (GimpParamSpecRGB),
-        0,
-        (GInstanceInitFunc) gimp_param_rgb_init
-      };
-
-      spec_type = g_type_register_static (G_TYPE_PARAM_BOXED,
-                                          "GimpParamRGB",
-                                          &type_info, 0);
-    }
-
-  return spec_type;
-}
-
-static void
-gimp_param_rgb_class_init (GParamSpecClass *class)
-{
-  class->value_type        = GIMP_TYPE_RGB;
-  class->value_set_default = gimp_param_rgb_set_default;
-  class->value_validate    = gimp_param_rgb_validate;
-  class->values_cmp        = gimp_param_rgb_values_cmp;
-}
-
-static void
-gimp_param_rgb_init (GParamSpec *pspec)
-{
-  GimpParamSpecRGB *cspec = GIMP_PARAM_SPEC_RGB (pspec);
-
-  gimp_rgba_set (&cspec->default_value, 0.0, 0.0, 0.0, 1.0);
-}
-
-static void
-gimp_param_rgb_set_default (GParamSpec *pspec,
-                            GValue     *value)
-{
-  GimpParamSpecRGB *cspec = GIMP_PARAM_SPEC_RGB (pspec);
-
-  g_value_set_static_boxed (value, &cspec->default_value);
-}
-
 static gboolean
 gimp_param_rgb_validate (GParamSpec *pspec,
                          GValue     *value)
@@ -655,55 +581,3 @@ gimp_param_rgb_values_cmp (GParamSpec   *pspec,
     }
 }
 
-/**
- * gimp_param_spec_rgb:
- * @name:          Canonical name of the param
- * @nick:          Nickname of the param
- * @blurb:         Brief desciption of param.
- * @has_alpha:     %TRUE if the alpha channel has relevance.
- * @default_value: Value to use if none is assigned.
- * @flags:         a combination of #GParamFlags
- *
- * Creates a param spec to hold an #GimpRGB value.
- * See g_param_spec_internal() for more information.
- *
- * Returns: a newly allocated #GParamSpec instance
- *
- * Since: GIMP 2.4
- **/
-GParamSpec *
-gimp_param_spec_rgb (const gchar   *name,
-                     const gchar   *nick,
-                     const gchar   *blurb,
-                     gboolean       has_alpha,
-                     const GimpRGB *default_value,
-                     GParamFlags    flags)
-{
-  GimpParamSpecRGB *cspec;
-
-  cspec = g_param_spec_internal (GIMP_TYPE_PARAM_RGB,
-                                 name, nick, blurb, flags);
-
-  cspec->has_alpha = has_alpha;
-
-  if (default_value)
-    cspec->default_value = *default_value;
-
-  return G_PARAM_SPEC (cspec);
-}
-
-/**
- * gimp_param_spec_rgb_has_alpha:
- * @pspec: a #GParamSpec to hold an #GimpRGB value.
- *
- * Returns: %TRUE if the alpha channel is relevant.
- *
- * Since: GIMP 2.4
- **/
-gboolean
-gimp_param_spec_rgb_has_alpha (GParamSpec *pspec)
-{
-  g_return_val_if_fail (GIMP_IS_PARAM_SPEC_RGB (pspec), FALSE);
-
-  return GIMP_PARAM_SPEC_RGB (pspec)->has_alpha;
-}

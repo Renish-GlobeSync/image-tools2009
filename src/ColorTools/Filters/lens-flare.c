@@ -4,9 +4,6 @@
 #include <string.h>
 
 #include <libgimp/gimp.h>
-#include <libgimp/gimpui.h>
-
-#include "libgimp/stdplugins-intl.h"
 
 #include "lens-flare.h"
 
@@ -21,27 +18,10 @@ typedef struct REFLECT
   gint    type;
 } Reflect;
 
-typedef struct
-{
-  GimpDrawable *drawable;
-  GimpPreview  *preview;
-  GtkWidget    *coords;
-  gboolean      cursor_drawn;
-  gint          curx, cury;                 /* x,y of cursor in preview */
-  gint          oldx, oldy;
-} FlareCenter;
-
 
 
 static void        FlareFX                        (GimpDrawable     *drawable,
                                                    GimpPreview      *preview);
-static GtkWidget * flare_center_create            (GimpDrawable     *drawable,
-                                                   GimpPreview      *preview);
-static void        flare_center_cursor_draw       (FlareCenter      *center);
-static void        flare_center_coords_update     (GimpSizeEntry    *coords,
-                                                   FlareCenter      *center);
-static void        flare_center_cursor_update     (FlareCenter      *center);
-
 static void mcolor  (guchar  *s,
                      gfloat   h);
 static void mglow   (guchar  *s,

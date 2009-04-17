@@ -2,9 +2,6 @@
 #include "config.h"
 
 #include <libgimp/gimp.h>
-#include <libgimp/gimpui.h>
-
-#include "libgimp/stdplugins-intl.h"
 
 #include "whirl-pinch.h"
 
@@ -281,7 +278,6 @@ void operation_whirl_pinch (void * in_buf, void * out_buf, long width, long heig
         &sel_x1, &sel_y1,
         &sel_width, &sel_height))
     {
-        g_message (_("Region affected by plug-in is empty"));
         return;
     }
 

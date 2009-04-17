@@ -242,7 +242,7 @@ gimp_tile_cache_insert (GimpTile *tile)
             return;
 
         /* At this point we have at least two elements in our list */
-        g_assert (tile_list_head != tile_list_tail);
+        //g_assert (tile_list_head != tile_list_tail);
 
         tile_list_head = g_list_remove_link (tile_list_head, list);
 

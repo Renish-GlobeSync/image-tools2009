@@ -4,9 +4,6 @@
 #include <string.h>
 
 #include <libgimp/gimp.h>
-#include <libgimp/gimpui.h>
-
-#include "libgimp/stdplugins-intl.h"
 
 #include "nova.h"
 
@@ -45,7 +42,8 @@ gauss (GRand *gr)
   gint    i;
 
   for (i = 0; i < 6; i++)
-    sum += g_rand_double (gr);
+    //sum += g_rand_double (gr);
+    sum += (double)rand() / (double)(RAND_MAX + 1);
 
   return sum / 6.0;
 }
@@ -74,12 +72,13 @@ nova (GimpDrawable *drawable,
    GimpHSV       hsv;
    gdouble       spokecol;
    gint          i;
-   GRand        *gr;
+   GRand        *gr = 0;
    guchar       *cache = NULL;
    gint          width, height;
    gdouble       zoom = 0.0;
 
-   gr = g_rand_new ();
+   //gr = g_rand_new ();
+   srand(time(NULL));
 
    /* initialize */
    has_alpha = gimp_drawable_has_alpha (drawable->drawable_id);
@@ -95,7 +94,8 @@ nova (GimpDrawable *drawable,
        spoke[i] = gauss (gr);
 
        hsv.h += ((gdouble) pvals.randomhue / 360.0) *
-                g_rand_double_range (gr, -0.5, 0.5);
+                //g_rand_double_range (gr, -0.5, 0.5);
+                (double)rand() / (double)(RAND_MAX + 1) - 0.5;
 
        if (hsv.h < 0)
          hsv.h += 1.0;
@@ -364,7 +364,7 @@ nova (GimpDrawable *drawable,
 
    g_free (spoke);
    g_free (spokecolor);
-   g_rand_free (gr);
+   //g_rand_free (gr);
 }
 
 void operation_nova (void * in_buf, void * out_buf, long width, long height, nova_config * config)

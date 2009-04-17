@@ -25,10 +25,7 @@
 #include <string.h>
 
 #include <libgimp/gimp.h>
-#include <libgimp/gimpui.h>
 #include <libgimpmath/gimpmath.h>
-
-#include "libgimp/stdplugins-intl.h"
 
 #include "oilify.h"
 
@@ -253,8 +250,8 @@ oilify (GimpDrawable *drawable,
       //gimp_preview_get_position (preview, &x1, &y1);
       //gimp_preview_get_size (preview, &width, &height);
 
-      x2 = x1 + width;
-      y2 = y1 + height;
+      //x2 = x1 + width;
+      //y2 = y1 + height;
     }
   else
     {
