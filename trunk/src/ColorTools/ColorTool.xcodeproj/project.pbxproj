@@ -62,6 +62,8 @@
 		DAA4A2C90F937C1C00AA6564 /* value-propagate.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A29E0F937C1C00AA6564 /* value-propagate.c */; };
 		DAA4A2CA0F937C1C00AA6564 /* whirl-pinch.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2A00F937C1C00AA6564 /* whirl-pinch.c */; };
 		DAA4A3870F9390F100AA6564 /* lens-apply.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA4A2690F937C1C00AA6564 /* lens-apply.c */; };
+		E87C2F410F98CCAA0057EF63 /* FiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C2F400F98CCAA0057EF63 /* FiltersViewController.m */; };
+		E87C2F470F98D1620057EF63 /* FiltersShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */; };
 		E89E32E20F64B059007F75C9 /* ColorToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89E32E10F64B059007F75C9 /* ColorToolViewController.m */; };
 		E89E32E90F64B1ED007F75C9 /* EffectShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E89E32E80F64B1ED007F75C9 /* EffectShowViewController.m */; };
 		E89E33880F64CC76007F75C9 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = E89E33870F64CC76007F75C9 /* sample.png */; };
@@ -165,6 +167,10 @@
 		DAA4A29F0F937C1C00AA6564 /* value-propagate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "value-propagate.h"; path = "Filters/value-propagate.h"; sourceTree = "<group>"; };
 		DAA4A2A00F937C1C00AA6564 /* whirl-pinch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "whirl-pinch.c"; path = "Filters/whirl-pinch.c"; sourceTree = "<group>"; };
 		DAA4A2A10F937C1C00AA6564 /* whirl-pinch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "whirl-pinch.h"; path = "Filters/whirl-pinch.h"; sourceTree = "<group>"; };
+		E87C2F3F0F98CCAA0057EF63 /* FiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersViewController.h; sourceTree = "<group>"; };
+		E87C2F400F98CCAA0057EF63 /* FiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersViewController.m; sourceTree = "<group>"; };
+		E87C2F450F98D1620057EF63 /* FiltersShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersShowViewController.h; sourceTree = "<group>"; };
+		E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersShowViewController.m; sourceTree = "<group>"; };
 		E89E32E00F64B059007F75C9 /* ColorToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorToolViewController.h; sourceTree = "<group>"; };
 		E89E32E10F64B059007F75C9 /* ColorToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorToolViewController.m; sourceTree = "<group>"; };
 		E89E32E70F64B1ED007F75C9 /* EffectShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectShowViewController.h; sourceTree = "<group>"; };
@@ -195,6 +201,10 @@
 				E89E32E10F64B059007F75C9 /* ColorToolViewController.m */,
 				E89E32E70F64B1ED007F75C9 /* EffectShowViewController.h */,
 				E89E32E80F64B1ED007F75C9 /* EffectShowViewController.m */,
+				E87C2F3F0F98CCAA0057EF63 /* FiltersViewController.h */,
+				E87C2F400F98CCAA0057EF63 /* FiltersViewController.m */,
+				E87C2F450F98D1620057EF63 /* FiltersShowViewController.h */,
+				E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -485,6 +495,8 @@
 				DA5127D70F98C04800B99BAD /* glist.c in Sources */,
 				DA5127D80F98C04800B99BAD /* gslist.c in Sources */,
 				DA5127F80F98C13A00B99BAD /* null_functions.c in Sources */,
+				E87C2F410F98CCAA0057EF63 /* FiltersViewController.m in Sources */,
+				E87C2F470F98D1620057EF63 /* FiltersShowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

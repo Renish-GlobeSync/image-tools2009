@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {947, 1482}}";
-			sepNavSelRange = "{1984, 0}";
-			sepNavVisRange = "{1582, 519}";
+			sepNavIntBoundsRect = "{{0, 0}, {933, 1520}}";
+			sepNavSelRange = "{2028, 0}";
+			sepNavVisRange = "{1528, 655}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* ColorTool */ = {
@@ -449,6 +449,20 @@
 		vrLen = 729;
 		vrLoc = 3;
 	};
+	E87C2F3F0F98CCAA0057EF63 /* FiltersViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {933, 513}}";
+			sepNavSelRange = "{257, 0}";
+			sepNavVisRange = "{0, 267}";
+		};
+	};
+	E87C2F400F98CCAA0057EF63 /* FiltersViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1220, 3880}}";
+			sepNavSelRange = "{1592, 0}";
+			sepNavVisRange = "{3321, 992}";
+		};
+	};
 	E89E328D0F64AEE7007F75C9 /* ColorTool */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -530,14 +544,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {933, 1159}}";
 			sepNavSelRange = "{489, 0}";
-			sepNavVisRange = "{0, 701}";
+			sepNavVisRange = "{0, 648}";
 		};
 	};
 	E89E32E80F64B1ED007F75C9 /* EffectShowViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {933, 5121}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1004, 5606}}";
 			sepNavSelRange = "{4466, 0}";
-			sepNavVisRange = "{4166, 611}";
+			sepNavVisRange = "{1710, 810}";
 			sepNavWindowFrame = "{{562, -172}, {1284, 772}}";
 		};
 	};
