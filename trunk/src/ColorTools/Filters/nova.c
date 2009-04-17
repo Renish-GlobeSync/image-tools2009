@@ -7,6 +7,7 @@
 
 #include "nova.h"
 
+#include <stdlib.h>
 
 #define SCALE_WIDTH    125
 

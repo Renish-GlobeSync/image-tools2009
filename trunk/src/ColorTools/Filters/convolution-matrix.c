@@ -408,7 +408,7 @@ check_matrix (void)
            * or left undefined, ie. for the user to define? */
           config.divisor = 1;
         }
-      redraw_off_and_div ();
+      //redraw_off_and_div ();
     }
 }
 

@@ -1,24 +1,3 @@
-#include "config.h"
-
-#include <glib.h>
-
-//GSList*  g_slist_prepend                 (GSList           *list,
-//					  gpointer          data)
-//{
-//    GSList * n = g_new (GSList, 1);
-//    n->data = data;
-//    n->next = list;
-//
-//    return n;
-//}
-//
-//void     g_slist_free                    (GSList           *list)
-//{
-//    if (list) {
-//        g_slist_free(list->next);
-//        g_free (list);
-//    }
-//}
 
 /* GLIB - Library of useful routines for C programming
  * Copyright (C) 1995-1997  Peter Mattis, Spencer Kimball and Josh MacDonald
@@ -80,7 +59,7 @@ g_slist_free (GSList *list)
 {
   //g_slice_free_chain (GSList, list, next);
     if (list) {
-        g_list_free (list->next);
+        g_slist_free (list->next);
         _g_slist_free1 (list);
     }
 }
