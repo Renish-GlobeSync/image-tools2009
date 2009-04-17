@@ -16,5 +16,5 @@
 	UIImageView *ivImage;
 	UIImage *originalImage;
 }
-
+- (void)applyFilter;
 @end
