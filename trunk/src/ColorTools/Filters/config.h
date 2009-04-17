@@ -192,3 +192,12 @@
 
 #define TILE_WIDTH  64
 #define TILE_HEIGHT 64
+
+typedef int GimpPreview;
+
+#define _(x) x
+
+#define __G_MESSAGES_H__
+#define g_return_if_fail(x) 
+#define g_return_val_if_fail(x, v)
+

@@ -5,9 +5,6 @@
 #include <string.h>
 
 #include <libgimp/gimp.h>
-#include <libgimp/gimpui.h>
-
-#include "libgimp/stdplugins-intl.h"
 
 #include "value-propagate.h"
 
@@ -36,16 +33,6 @@ static void         prepare_row                (GimpPixelRgn  *pixel_rgn,
                                                 gint           x,
                                                 gint           y,
                                                 gint           w);
-
-static void    vpropagate_toggle_button_update (GtkWidget     *widget,
-                                                gpointer       data);
-static GtkWidget *  gtk_table_add_toggle       (GtkWidget     *table,
-                                                const gchar   *name,
-                                                gint           x1,
-                                                gint           x2,
-                                                gint           y,
-                                                GCallback      update,
-                                                gint          *value);
 
 static int          value_difference_check  (guchar *, guchar *, int);
 static void         set_value               (GimpImageBaseType,
@@ -125,7 +112,6 @@ static gint       peak_max = 1;
 static gint       peak_min = 1;
 static gint       peak_includes_equals = 1;
 static guchar     fore[3];
-static GtkWidget *preview;
 
 typedef struct
 {
@@ -135,6 +121,8 @@ typedef struct
   void  (*updater) (GimpImageBaseType, gint, guchar *, guchar *, guchar *, gpointer);
   void  (*finalizer) (GimpImageBaseType, gint, guchar *, guchar *, guchar *, gpointer);
 } ModeParam;
+
+#define N_(x) x
 
 #define num_mode 8
 static ModeParam modes[num_mode] =
@@ -323,6 +311,17 @@ value_propagate_body (GimpDrawable *drawable,
       gimp_drawable_merge_shadow (drawable->drawable_id, TRUE);
       gimp_drawable_update (drawable->drawable_id, begx, begy, endx-begx, endy-begy);
     }
+
+    g_free(best);
+    g_free (prev_row);
+    g_free (cur_row);
+    g_free (next_row);
+    g_free (dest_row);
+
+    if (tmp != NULL) {
+        g_free (tmp); 
+    }
+
 }
 
 static void

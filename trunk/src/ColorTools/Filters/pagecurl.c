@@ -2,9 +2,6 @@
 #include "config.h"
 
 #include <libgimp/gimp.h>
-#include <libgimp/gimpui.h>
-
-#include "libgimp/stdplugins-intl.h"
 
 #include "pagecurl.h"
 
@@ -46,8 +43,6 @@ static const guint8 *curl_pixbufs[] =
   curl6,
   curl7
 };
-
-static GtkWidget *curl_image = NULL;
 
 static gint   sel_x1, sel_y1, sel_x2, sel_y2;
 static gint   true_sel_width, true_sel_height;
@@ -147,40 +142,6 @@ set_default_params (void)
   curl.shade       = TRUE;
   curl.edge        = CURL_EDGE_LOWER_RIGHT;
   curl.orientation = CURL_ORIENTATION_VERTICAL;
-}
-
-/********************************************************************/
-/* dialog callbacks                                                 */
-/********************************************************************/
-
-static void
-dialog_scale_update (GtkAdjustment *adjustment,
-		     gdouble       *value)
-{
-  *value = ((gdouble) adjustment->value) / 100.0;
-}
-
-static void
-curl_pixbuf_update (void)
-{
-  GdkPixbuf *pixbuf;
-  gint       index;
-
-  switch (curl.edge)
-    {
-    case CURL_EDGE_LOWER_RIGHT: index = 0; break;
-    case CURL_EDGE_LOWER_LEFT:  index = 1; break;
-    case CURL_EDGE_UPPER_RIGHT: index = 2; break;
-    case CURL_EDGE_UPPER_LEFT:  index = 3; break;
-    default:
-      return;
-    }
-
-  index += curl.orientation * 4;
-
-  pixbuf = gdk_pixbuf_new_from_inline (-1, curl_pixbufs[index], FALSE, NULL);
-  gtk_image_set_from_pixbuf (GTK_IMAGE (curl_image), pixbuf);
-  g_object_unref (pixbuf);
 }
 
 static void

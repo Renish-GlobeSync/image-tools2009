@@ -4,9 +4,6 @@
 #include <string.h>
 
 #include <libgimp/gimp.h>
-#include <libgimp/gimpui.h>
-
-#include "libgimp/stdplugins-intl.h"
 
 #include "nl-filter.h"
 
@@ -290,7 +287,6 @@ nlfiltInit (gdouble alpha, gdouble radius, FilterType filter)
        }
        break;
        default:
-         g_printerr ("unknown filter %d\n", filter);
          return -1;
    }
        /*

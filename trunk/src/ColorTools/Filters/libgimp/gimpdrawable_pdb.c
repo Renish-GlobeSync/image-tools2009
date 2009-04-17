@@ -545,8 +545,8 @@ gimp_drawable_get_name (gint32 drawable_ID)
         GIMP_PDB_DRAWABLE, drawable_ID,
         GIMP_PDB_END);
 
-    if (return_vals[0].data.d_status == GIMP_PDB_SUCCESS)
-        name = g_strdup (return_vals[1].data.d_string);
+    //if (return_vals[0].data.d_status == GIMP_PDB_SUCCESS)
+    //    name = g_strdup (return_vals[1].data.d_string);
 
     gimp_destroy_params (return_vals, nreturn_vals);
 
