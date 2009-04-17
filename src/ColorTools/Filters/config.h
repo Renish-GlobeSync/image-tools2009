@@ -35,7 +35,7 @@
 #define HAVE_VPRINTF 1
 
 /* Define as __inline if that's what the C compiler calls it.  */
-#define inline __inline
+//#define inline __inline
 
 /* Define to `long' if <sys/types.h> doesn't define.  */
 /* #undef off_t */
