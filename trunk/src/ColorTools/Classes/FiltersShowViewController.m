@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	//
-	UIImage *image = [UIImage imageNamed:@"sample.png"];
+	UIImage *image = [UIImage imageNamed:@"filter.png"];
 	//CGImageRef ref = [image CGImage];
 	UILabel *lb;
 	lb = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 16)];
@@ -60,7 +60,7 @@
 	ivImage.image = image;
 	//
 	//delegate = (ColorToolAppDelegate *)[UIApplication sharedApplication].delegate;
-	originalImage = [UIImage imageNamed:@"sample.png"];
+	originalImage = [UIImage imageNamed:@"filter.png"];
 	//
 	[self applyFilter];
 }
