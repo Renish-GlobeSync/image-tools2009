@@ -12,13 +12,15 @@
 
 @interface ColorToolAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-	UINavigationController *nav;
-    ColorToolViewController *viewController;
+	//UINavigationController *nav;
+    //ColorToolViewController *viewController;
+	UITabBarController *tabbarController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic,retain) UINavigationController *nav;
-@property (nonatomic, retain) IBOutlet ColorToolViewController *viewController;
+@property (nonatomic, retain) IBOutlet UITabBarController *tabbarController;
+//@property (nonatomic,retain) UINavigationController *nav;
+//@property (nonatomic, retain) IBOutlet ColorToolViewController *viewController;
 //
 /*
 UIImage * ImageTools(UIImage * image, 

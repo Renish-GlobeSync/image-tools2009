@@ -23,15 +23,16 @@
 @implementation ColorToolAppDelegate
 
 @synthesize window;
-@synthesize nav;
-@synthesize viewController;
+@synthesize tabbarController;
+//@synthesize nav;
+//@synthesize viewController;
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
     // Override point for customization after app launch
-    nav = [[UINavigationController alloc] initWithRootViewController:viewController];
-    [window addSubview:nav.view];
+    //nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [window addSubview:tabbarController.view];
     [window makeKeyAndVisible];
 }
 /*
@@ -67,8 +68,9 @@ UIImage * ImageTools(UIImage * image,
 }
 */
 - (void)dealloc {
-	[nav release];
-    [viewController release];
+	//[nav release];
+    //[viewController release];
+	[tabbarController release];
     [window release];
     [super dealloc];
 }
