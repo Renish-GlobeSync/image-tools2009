@@ -44,19 +44,19 @@
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 			</object>
-			<object class="IBUITabBarController" id="917856295">
+			<object class="IBUITabBarController" id="590710416">
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUINavigationController" id="215961248">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="1038587932">
+					<object class="IBUINavigationController" id="959068833">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="625311785">
 							<string key="IBUITitle">Color Tool</string>
 							<reference key="IBUITabBar"/>
 						</object>
-						<reference key="IBUIParentViewController" ref="917856295"/>
+						<reference key="IBUIParentViewController" ref="590710416"/>
 						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="885005124">
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="110292736">
 							<nil key="NSNextResponder"/>
 							<int key="NSvFlags">256</int>
 							<string key="NSFrameSize">{0, 0}</string>
@@ -67,23 +67,23 @@
 						<object class="NSArray" key="IBUIViewControllers">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUIViewController" id="943309135">
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="609005228">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="1064573028">
 									<string key="IBUITitle">Item</string>
 								</object>
-								<reference key="IBUIParentViewController" ref="215961248"/>
+								<reference key="IBUIParentViewController" ref="959068833"/>
 								<string key="IBUINibName">ColorToolViewController</string>
 								<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 							</object>
 						</object>
 					</object>
-					<object class="IBUINavigationController" id="162715423">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="39011199">
+					<object class="IBUINavigationController" id="476161622">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="153544628">
 							<string key="IBUITitle">Filter</string>
 							<reference key="IBUITabBar"/>
 						</object>
-						<reference key="IBUIParentViewController" ref="917856295"/>
+						<reference key="IBUIParentViewController" ref="590710416"/>
 						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="77707901">
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="841270035">
 							<nil key="NSNextResponder"/>
 							<int key="NSvFlags">256</int>
 							<string key="NSFrameSize">{0, 0}</string>
@@ -93,16 +93,16 @@
 						</object>
 						<object class="NSMutableArray" key="IBUIViewControllers">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIViewController" id="969343887">
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="629087821">
+							<object class="IBUIViewController" id="1028146033">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="302333785">
 									<string key="IBUITitle">Navigation Item</string>
 								</object>
-								<reference key="IBUIParentViewController" ref="162715423"/>
+								<reference key="IBUIParentViewController" ref="476161622"/>
 							</object>
 						</object>
 					</object>
 				</object>
-				<object class="IBUITabBar" key="IBUITabBar" id="347929577">
+				<object class="IBUITabBar" key="IBUITabBar" id="982624100">
 					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">266</int>
 					<string key="NSFrame">{{129, 330}, {163, 49}}</string>
@@ -137,7 +137,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">tabbarController</string>
 						<reference key="source" ref="664661524"/>
-						<reference key="destination" ref="917856295"/>
+						<reference key="destination" ref="590710416"/>
 					</object>
 					<int key="connectionID">32</int>
 				</object>
@@ -177,89 +177,89 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
-						<reference key="object" ref="917856295"/>
+						<reference key="object" ref="590710416"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="347929577"/>
-							<reference ref="162715423"/>
-							<reference ref="215961248"/>
+							<reference ref="982624100"/>
+							<reference ref="476161622"/>
+							<reference ref="959068833"/>
 						</object>
 						<reference key="parent" ref="957960031"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
-						<reference key="object" ref="347929577"/>
-						<reference key="parent" ref="917856295"/>
+						<reference key="object" ref="982624100"/>
+						<reference key="parent" ref="590710416"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">21</int>
-						<reference key="object" ref="215961248"/>
+						<reference key="object" ref="959068833"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="885005124"/>
-							<reference ref="1038587932"/>
+							<reference ref="110292736"/>
+							<reference ref="625311785"/>
 							<reference ref="943309135"/>
 						</object>
-						<reference key="parent" ref="917856295"/>
+						<reference key="parent" ref="590710416"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
-						<reference key="object" ref="885005124"/>
-						<reference key="parent" ref="215961248"/>
+						<reference key="object" ref="110292736"/>
+						<reference key="parent" ref="959068833"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">25</int>
-						<reference key="object" ref="1038587932"/>
-						<reference key="parent" ref="215961248"/>
+						<reference key="object" ref="625311785"/>
+						<reference key="parent" ref="959068833"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
 						<reference key="object" ref="943309135"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="609005228"/>
+							<reference ref="1064573028"/>
 						</object>
-						<reference key="parent" ref="215961248"/>
+						<reference key="parent" ref="959068833"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">26</int>
-						<reference key="object" ref="609005228"/>
+						<reference key="object" ref="1064573028"/>
 						<reference key="parent" ref="943309135"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">27</int>
-						<reference key="object" ref="162715423"/>
+						<reference key="object" ref="476161622"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="969343887"/>
-							<reference ref="77707901"/>
-							<reference ref="39011199"/>
+							<reference ref="1028146033"/>
+							<reference ref="841270035"/>
+							<reference ref="153544628"/>
 						</object>
-						<reference key="parent" ref="917856295"/>
+						<reference key="parent" ref="590710416"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">28</int>
-						<reference key="object" ref="969343887"/>
+						<reference key="object" ref="1028146033"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="629087821"/>
+							<reference ref="302333785"/>
 						</object>
-						<reference key="parent" ref="162715423"/>
+						<reference key="parent" ref="476161622"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">29</int>
-						<reference key="object" ref="77707901"/>
-						<reference key="parent" ref="162715423"/>
+						<reference key="object" ref="841270035"/>
+						<reference key="parent" ref="476161622"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">31</int>
-						<reference key="object" ref="39011199"/>
-						<reference key="parent" ref="162715423"/>
+						<reference key="object" ref="153544628"/>
+						<reference key="parent" ref="476161622"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">30</int>
-						<reference key="object" ref="629087821"/>
-						<reference key="parent" ref="969343887"/>
+						<reference key="object" ref="302333785"/>
+						<reference key="parent" ref="1028146033"/>
 					</object>
 				</object>
 			</object>
@@ -280,6 +280,7 @@
 					<string>21.IBPluginDependency</string>
 					<string>23.IBPluginDependency</string>
 					<string>27.IBPluginDependency</string>
+					<string>28.CustomClassName</string>
 					<string>28.IBPluginDependency</string>
 					<string>29.IBPluginDependency</string>
 					<string>3.CustomClassName</string>
@@ -301,6 +302,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>FiltersViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ColorToolAppDelegate</string>
@@ -368,6 +370,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/ColorToolViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">FiltersViewController</string>
+					<string key="superclassName">UITableViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/FiltersViewController.h</string>
 					</object>
 				</object>
 			</object>
