@@ -527,10 +527,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					Filters,
-					/Library/Frameworks/Cairo.framework/Headers/,
-					/Library/Frameworks/Gtk.framework/Headers/,
-					/Library/Frameworks/GLib.framework/Headers/,
-					"/Users/YW/Documents/iPhoneApp/gimp-2.6.0",
+					/Library/Frameworks/Cairo.framework/Headers,
+					/Library/Frameworks/Gtk.framework/Headers,
+					/Library/Frameworks/GLib.framework/Headers,
+					"/Users/engineer/Desktop/gimp-2.6.0",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
@@ -547,6 +547,13 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					Filters,
+					/Library/Frameworks/Cairo.framework/Headers,
+					/Library/Frameworks/Gtk.framework/Headers,
+					/Library/Frameworks/GLib.framework/Headers,
+					"/Users/engineer/Desktop/gimp-2.6.0",
+				);
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6F012A28-9750-4172-B971-B9361125A2E5";
 				SDKROOT = iphoneos2.2.1;
