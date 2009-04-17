@@ -2,9 +2,9 @@
 {
 	1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {947, 589}}";
-			sepNavSelRange = "{723, 0}";
-			sepNavVisRange = "{141, 591}";
+			sepNavIntBoundsRect = "{{0, 0}, {933, 627}}";
+			sepNavSelRange = "{548, 0}";
+			sepNavVisRange = "{3, 845}";
 		};
 	};
 	1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */ = {
@@ -23,7 +23,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = E89E328D0F64AEE7007F75C9 /* ColorTool */;
-		activeSDKPreference = iphoneos2.2;
+		activeSDKPreference = iphonesimulator2.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ColorTool */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* ColorTool */,
@@ -86,6 +86,10 @@
 			E87C2F150F98C3400057EF63 /* PBXTextBookmark */ = E87C2F150F98C3400057EF63 /* PBXTextBookmark */;
 			E87C2F160F98C3400057EF63 /* PBXTextBookmark */ = E87C2F160F98C3400057EF63 /* PBXTextBookmark */;
 			E87C2F270F98C5B60057EF63 /* PBXTextBookmark */ = E87C2F270F98C5B60057EF63 /* PBXTextBookmark */;
+			E87C2F300F98C95D0057EF63 /* PBXTextBookmark */ = E87C2F300F98C95D0057EF63 /* PBXTextBookmark */;
+			E87C2F310F98C95D0057EF63 /* PBXTextBookmark */ = E87C2F310F98C95D0057EF63 /* PBXTextBookmark */;
+			E87C2F320F98C95D0057EF63 /* PBXTextBookmark */ = E87C2F320F98C95D0057EF63 /* PBXTextBookmark */;
+			E87C2F330F98C95D0057EF63 /* PBXTextBookmark */ = E87C2F330F98C95D0057EF63 /* PBXTextBookmark */;
 			E89E32ED0F64B212007F75C9 = E89E32ED0F64B212007F75C9 /* PBXTextBookmark */;
 			E89E32EF0F64B21B007F75C9 = E89E32EF0F64B21B007F75C9 /* PBXTextBookmark */;
 			E89E32F00F64B21B007F75C9 = E89E32F00F64B21B007F75C9 /* PBXTextBookmark */;
@@ -405,6 +409,46 @@
 		vrLen = 767;
 		vrLoc = 149;
 	};
+	E87C2F300F98C95D0057EF63 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E89E32E70F64B1ED007F75C9 /* EffectShowViewController.h */;
+		name = "EffectShowViewController.h: 21";
+		rLen = 0;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 701;
+		vrLoc = 0;
+	};
+	E87C2F310F98C95D0057EF63 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
+		name = "ColorToolAppDelegate.h: 27";
+		rLen = 0;
+		rLoc = 847;
+		rType = 0;
+		vrLen = 703;
+		vrLoc = 30;
+	};
+	E87C2F320F98C95D0057EF63 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E89E32E70F64B1ED007F75C9 /* EffectShowViewController.h */;
+		name = "EffectShowViewController.h: 21";
+		rLen = 0;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 701;
+		vrLoc = 0;
+	};
+	E87C2F330F98C95D0057EF63 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
+		name = "ColorToolAppDelegate.h: 13";
+		rLen = 0;
+		rLoc = 245;
+		rType = 0;
+		vrLen = 729;
+		vrLoc = 3;
+	};
 	E89E328D0F64AEE7007F75C9 /* ColorTool */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -485,8 +529,8 @@
 	E89E32E70F64B1ED007F75C9 /* EffectShowViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {933, 1159}}";
-			sepNavSelRange = "{249, 0}";
-			sepNavVisRange = "{149, 767}";
+			sepNavSelRange = "{489, 0}";
+			sepNavVisRange = "{0, 701}";
 		};
 	};
 	E89E32E80F64B1ED007F75C9 /* EffectShowViewController.m */ = {
@@ -538,7 +582,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 36";
 		rLen = 145;
-		rLoc = 898;
+		rLoc = 947;
 		rType = 0;
 		vrLen = 823;
 		vrLoc = 589;
@@ -598,7 +642,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 36";
 		rLen = 145;
-		rLoc = 898;
+		rLoc = 947;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 589;
@@ -628,7 +672,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 36";
 		rLen = 145;
-		rLoc = 898;
+		rLoc = 947;
 		rType = 0;
 		vrLen = 823;
 		vrLoc = 589;
@@ -778,7 +822,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 517;
 		vrLoc = 1580;
@@ -788,7 +832,7 @@
 		comments = "error: syntax error before 'nav'";
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		rLen = 1;
-		rLoc = 19;
+		rLoc = 21;
 		rType = 1;
 	};
 	E89E33250F64B519007F75C9 /* PBXTextBookmark */ = {
@@ -816,7 +860,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 36";
 		rLen = 145;
-		rLoc = 898;
+		rLoc = 947;
 		rType = 0;
 		vrLen = 574;
 		vrLoc = 500;
@@ -826,7 +870,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 486;
+		rLoc = 608;
 		rType = 0;
 		vrLen = 649;
 		vrLoc = 47;
@@ -836,7 +880,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 517;
 		vrLoc = 1580;
@@ -846,7 +890,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 47;
@@ -866,7 +910,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 47;
@@ -886,7 +930,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 47;
@@ -1066,7 +1110,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 294;
@@ -1184,7 +1228,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 423;
 		vrLoc = 294;
@@ -1202,7 +1246,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 423;
 		vrLoc = 294;
@@ -1232,7 +1276,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 585;
 		vrLoc = 141;
@@ -1242,7 +1286,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 679;
 		vrLoc = 539;
@@ -1422,7 +1466,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 585;
 		vrLoc = 141;
@@ -1432,7 +1476,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 679;
 		vrLoc = 539;
@@ -1562,7 +1606,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 27";
 		rLen = 0;
-		rLoc = 723;
+		rLoc = 847;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 141;
@@ -1572,7 +1616,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 519;
 		vrLoc = 1582;
@@ -1612,7 +1656,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 585;
 		vrLoc = 141;
@@ -1632,7 +1676,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 20";
 		rLen = 0;
-		rLoc = 482;
+		rLoc = 604;
 		rType = 0;
 		vrLen = 585;
 		vrLoc = 141;
@@ -1642,7 +1686,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 38";
 		rLen = 1083;
-		rLoc = 898;
+		rLoc = 947;
 		rType = 0;
 		vrLen = 827;
 		vrLoc = 893;
@@ -1682,7 +1726,7 @@
 		fRef = 1D3623240D0F684500981E51 /* ColorToolAppDelegate.h */;
 		name = "ColorToolAppDelegate.h: 27";
 		rLen = 0;
-		rLoc = 723;
+		rLoc = 847;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 141;
@@ -1692,7 +1736,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 519;
 		vrLoc = 1582;
@@ -1811,7 +1855,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 519;
 		vrLoc = 1582;
@@ -1851,7 +1895,7 @@
 		fRef = 1D3623250D0F684500981E51 /* ColorToolAppDelegate.m */;
 		name = "ColorToolAppDelegate.m: 68";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 519;
 		vrLoc = 1582;
