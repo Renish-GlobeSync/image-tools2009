@@ -120,6 +120,7 @@
 		DA5127D40F98C04800B99BAD /* glist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glist.c; path = Filters/glist.c; sourceTree = "<group>"; };
 		DA5127D50F98C04800B99BAD /* gslist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gslist.c; path = Filters/gslist.c; sourceTree = "<group>"; };
 		DA5127F70F98C13A00B99BAD /* null_functions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = null_functions.c; path = Filters/null_functions.c; sourceTree = "<group>"; };
+		DA5128410F98C5E400B99BAD /* default.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = default.h; path = Filters/default.h; sourceTree = "<group>"; };
 		DAA4A2620F937C1C00AA6564 /* cartoon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cartoon.c; path = Filters/cartoon.c; sourceTree = "<group>"; };
 		DAA4A2630F937C1C00AA6564 /* cartoon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cartoon.h; path = Filters/cartoon.h; sourceTree = "<group>"; };
 		DAA4A2640F937C1C00AA6564 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = Filters/config.h; sourceTree = "<group>"; };
@@ -306,6 +307,7 @@
 		DAA4A2610F937BA300AA6564 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				DA5128410F98C5E400B99BAD /* default.h */,
 				DA5127F70F98C13A00B99BAD /* null_functions.c */,
 				DA5127D30F98C04800B99BAD /* ghash.c */,
 				DA5127D40F98C04800B99BAD /* glist.c */,
@@ -542,7 +544,7 @@
 					/Library/Frameworks/Cairo.framework/Headers,
 					/Library/Frameworks/Gtk.framework/Headers,
 					/Library/Frameworks/GLib.framework/Headers,
-					"/Users/engineer/Desktop/gimp-2.6.0",
+					"/Users/YW/Documents/iPhoneApp/gimp-2.6.0",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
