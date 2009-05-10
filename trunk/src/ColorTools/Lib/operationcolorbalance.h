@@ -8,10 +8,10 @@
  */
 
 typedef struct {
-	bool		preserve_luminosity;
-	double		cyan_red[3];
-	double		magenta_green[3];
-	double		yellow_blue[3];
+    bool        preserve_luminosity;
+    double        cyan_red[3];
+    double        magenta_green[3];
+    double        yellow_blue[3];
 
 } color_balance_config;
 

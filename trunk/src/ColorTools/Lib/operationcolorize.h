@@ -8,9 +8,9 @@
  */
 
 typedef struct {
-	double             hue;
-	double             saturation;
-	double             lightness;
+    double             hue;
+    double             saturation;
+    double             lightness;
 } colorize_config;
 
-bool operation_colorize(void * in_buf, void * out_buf, long samples, const colorize_config * config);
+bool operation_colorize (void * in_buf, void * out_buf, long samples, const colorize_config * config);

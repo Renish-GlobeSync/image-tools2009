@@ -4,54 +4,54 @@
 /*  RGB and RGBA color types and operations taken from LibGCK  */
 
 typedef enum
-	{
-		RGB_COMPOSITE_NONE = 0,
-		RGB_COMPOSITE_NORMAL,
-		RGB_COMPOSITE_BEHIND
-	} RGBCompositeMode;
+    {
+        RGB_COMPOSITE_NONE = 0,
+        RGB_COMPOSITE_NORMAL,
+        RGB_COMPOSITE_BEHIND
+    } RGBCompositeMode;
 
 
 void      rgb_set             (RGB       *rgb,
-								double        red,
-								double        green,
-								double        blue);
+                                double        red,
+                                double        green,
+                                double        blue);
 void      rgb_set_alpha       (RGB       *rgb,
-								double        alpha);
+                                double        alpha);
 
 void      rgb_set_uchar       (RGB       *rgb,
-								unsigned char         red,
-								unsigned char         green,
-								unsigned char         blue);
+                                unsigned char         red,
+                                unsigned char         green,
+                                unsigned char         blue);
 void      rgb_get_uchar       (const RGB *rgb,
-								unsigned char        *red,
-								unsigned char        *green,
-								unsigned char        *blue);
+                                unsigned char        *red,
+                                unsigned char        *green,
+                                unsigned char        *blue);
 
 int  rgb_parse_name      (RGB       *rgb,
-								const char   *name,
-								int           len);
+                                const char   *name,
+                                int           len);
 bool  rgb_parse_hex       (RGB       *rgb,
-								const char   *hex,
-								int           len);
+                                const char   *hex,
+                                int           len);
 bool  rgb_parse_css       (RGB       *rgb,
-								const char   *css,
-								int           len);
+                                const char   *css,
+                                int           len);
 
 void      rgb_add             (RGB       *rgb1,
-								const RGB *rgb2);
+                                const RGB *rgb2);
 void      rgb_subtract        (RGB       *rgb1,
-								const RGB *rgb2);
+                                const RGB *rgb2);
 void      rgb_multiply        (RGB       *rgb1,
-								double        factor);
+                                double        factor);
 double   rgb_distance        (const RGB *rgb1,
-							   const RGB *rgb2);
+                               const RGB *rgb2);
 
 double   rgb_max             (const RGB *rgb);
 double   rgb_min             (const RGB *rgb);
 void      rgb_clamp           (RGB       *rgb);
 
 void      rgb_gamma           (RGB       *rgb,
-								double        gamma);
+                                double        gamma);
 
 double   rgb_luminance       (const RGB *rgb);
 unsigned char    rgb_luminance_uchar (const RGB *rgb);
@@ -60,44 +60,44 @@ double   rgb_intensity       (const RGB *rgb);
 unsigned char    rgb_intensity_uchar (const RGB *rgb);
 
 void      rgb_composite       (RGB              *color1,
-								const RGB        *color2,
-								RGBCompositeMode  mode);
+                                const RGB        *color2,
+                                RGBCompositeMode  mode);
 
 /*  access to the list of color names  */
 int      rgb_list_names      (const char ***names,
-							   RGB      **colors);
+                               RGB      **colors);
 
 
 void      rgba_set            (RGB       *rgba,
-								double        red,
-								double        green,
-								double        blue,
-								double        alpha);
+                                double        red,
+                                double        green,
+                                double        blue,
+                                double        alpha);
 
 void      rgba_set_uchar      (RGB       *rgba,
-								unsigned char         red,
-								unsigned char         green,
-								unsigned char         blue,
-								unsigned char         alpha);
+                                unsigned char         red,
+                                unsigned char         green,
+                                unsigned char         blue,
+                                unsigned char         alpha);
 void      rgba_get_uchar      (const RGB *rgba,
-								unsigned char        *red,
-								unsigned char        *green,
-								unsigned char        *blue,
-								unsigned char        *alpha);
+                                unsigned char        *red,
+                                unsigned char        *green,
+                                unsigned char        *blue,
+                                unsigned char        *alpha);
 
 bool  rgba_parse_css      (RGB       *rgba,
-								const char   *css,
-								int           len);
+                                const char   *css,
+                                int           len);
 
 void      rgba_add            (RGB       *rgba1,
-								const RGB *rgba2);
+                                const RGB *rgba2);
 void      rgba_subtract       (RGB       *rgba1,
-								const RGB *rgba2);
+                                const RGB *rgba2);
 void      rgba_multiply       (RGB       *rgba,
-								double        factor);
+                                double        factor);
 
 double   rgba_distance       (const RGB *rgba1,
-							   const RGB *rgba2);
+                               const RGB *rgba2);
 
 
 
