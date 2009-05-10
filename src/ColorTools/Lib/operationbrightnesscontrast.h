@@ -8,8 +8,10 @@
  */
 
 typedef struct {
-	double             brightness;
-	double             contrast;
+    double             brightness;
+    double             contrast;
 } brightness_contrast_config;
 
 bool operation_brightness_contrast (void * in_buf, void * out_buf, long samples, const brightness_contrast_config * config);
+
+bool operation_brightness_contrast_optimize (void * in_buf, void * out_buf, long samples, const brightness_contrast_config * config);

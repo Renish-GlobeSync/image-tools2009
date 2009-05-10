@@ -26,6 +26,8 @@ struct _CMYK
   double c, m, y, k, a;
 };
 
+#define inline
+
 typedef int bool;
 #define FALSE 0
 #define TRUE 1

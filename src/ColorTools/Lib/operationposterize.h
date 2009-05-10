@@ -8,7 +8,7 @@
  */
 
 typedef struct {
-	double levels;
+    double levels;
 } posterize_config;
 
 bool operation_posterize (void * in_buf, void * out_buf, long samples, const posterize_config * config);

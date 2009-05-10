@@ -8,8 +8,8 @@
  */
 
 typedef struct {
-	double          low;
-	double          high;
+    double          low;
+    double          high;
 } threshold_config;
 
 bool operation_threshold(void * in_buf, void * out_buf, long samples, const threshold_config * config);

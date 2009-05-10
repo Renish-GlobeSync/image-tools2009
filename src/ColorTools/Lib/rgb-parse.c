@@ -209,7 +209,7 @@ rgb_parse_name (RGB     *rgb,
 {
   char    *tmp;
   bool  result;
-	
+    
   tmp = rgb_parse_strip (name, len);
 
   result = rgb_parse_name_internal (rgb, tmp);
@@ -359,8 +359,8 @@ rgb_list_names (const char ***names,
                      RGB      **colors)
 {
   int i;
-	
-	int n = sizeof(named_colors) / sizeof(named_colors[0]);
+    
+    int n = sizeof(named_colors) / sizeof(named_colors[0]);
 
   *names  = malloc(sizeof (const char *) * n);
   *colors = malloc(sizeof(RGB) * n);
@@ -453,7 +453,7 @@ rgb_parse_hex_component (const char *hex,
       if (!*hex || !isxdigit (*hex))
         return FALSE;
 
-		c = (c << 4) | (*hex <='9' ? *hex - '0' : (*hex <= 'F' ?  *hex - 'A' : *hex - 'a'));
+        c = (c << 4) | (*hex <='9' ? *hex - '0' : (*hex <= 'F' ?  *hex - 'A' : *hex - 'a'));
     }
 
   switch (len)
