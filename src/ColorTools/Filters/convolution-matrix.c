@@ -435,6 +435,8 @@ void operation_convolution_matrix(
 {
     GimpDrawable * drawable = gimp_drawable_get(0, in_buf, out_buf, width, height);
     config = *pconfig;
+    check_matrix();
+    check_config(drawable);
     convolve_image(drawable, NULL);
     gimp_drawable_detach (drawable);
 }
