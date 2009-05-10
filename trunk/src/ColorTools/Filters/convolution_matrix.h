@@ -1,7 +1,4 @@
-
-#define BIG_MATRIX  /* toggle for 11x11 matrix code experimental*/
-#undef BIG_MATRIX
-
+// convolution_matrix.h
 
 #ifndef BIG_MATRIX
 #define MATRIX_SIZE   (5)
@@ -21,6 +18,7 @@ typedef enum
   WRAP,
   CLEAR
 } BorderMode;
+
 typedef struct
 {
   gfloat     matrix[MATRIX_SIZE][MATRIX_SIZE];
