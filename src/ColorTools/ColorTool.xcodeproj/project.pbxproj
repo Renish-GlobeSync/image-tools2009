@@ -548,7 +548,7 @@
 					/Library/Frameworks/Cairo.framework/Headers,
 					/Library/Frameworks/GLib.framework/Headers,
 					/Library/Frameworks/Gtk.framework/Headers,
-					"/Users/engineer/Desktop/gimp-2.6.0",
+					"/Users/YW/Documents/iPhoneApp/gimp-2.6.0",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
