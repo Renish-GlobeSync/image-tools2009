@@ -95,8 +95,8 @@ gimp_drawable_get (gint32  drawable_ID,
     drawable->bpr          = width * bpp;
     drawable->ntile_rows   = (height + TILE_HEIGHT - 1) / TILE_HEIGHT;
     drawable->ntile_cols   = (width  + TILE_WIDTH  - 1) / TILE_WIDTH;
-    drawable->type         = GIMP_RGB_IMAGE;
-    drawable->has_alpha    = FALSE;
+    drawable->type         = GIMP_RGBA_IMAGE;
+    drawable->has_alpha    = TRUE;
     drawable->bytes        = bytes;
     drawable->shadow_bytes = shadow_bytes;
 
