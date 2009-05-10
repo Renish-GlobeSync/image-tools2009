@@ -8,7 +8,7 @@
 
 #import "EffectShowViewController.h"
 #import  "ColorToolAppDelegate.h"
-#import "curve.h"
+#import "curve.h"	
 
 @implementation EffectShowViewController
 @synthesize ivImage,tvDesp;
@@ -199,7 +199,7 @@ UIImage * ImageTools(UIImage * image,
 	data = malloc(bytesPerRow * height);
 	
 	context = CGBitmapContextCreate(data, width, height, bitPerPerComponent, bytesPerRow, colorspace, 
-									kCGImageAlphaNoneSkipFirst);
+									kCGImageAlphaPremultipliedFirst);
 	
 	CGRect rect = {{0, 0}, {width, height}};
 	CGContextDrawImage(context, rect, image.CGImage);

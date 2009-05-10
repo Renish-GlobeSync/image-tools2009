@@ -106,7 +106,7 @@ UIImage * Filters(UIImage * image,
 	data1 = malloc(bytesPerRow * height);
 	
 	context = CGBitmapContextCreate(data, width, height, bitPerPerComponent, bytesPerRow, colorspace, 
-									kCGImageAlphaNoneSkipLast);
+									kCGImageAlphaPremultipliedLast);
 	
 	CGRect rect = {{0, 0}, {width, height}};
 	CGContextDrawImage(context, rect, image.CGImage);
@@ -152,7 +152,7 @@ UIImage * Filters(UIImage * image,
 			ivImage.image = Filters(originalImage, operation_lens_flare, &config_lens_flare);
 			break;
 		case 9:
-			//ivImage.image = Filters(originalImage, operation_, &config);
+			ivImage.image = Filters(originalImage, operation_nova, &config_nova);
 			break;
 		case 10:
 			ivImage.image = Filters(originalImage, operation_lens_apply, &config_lens_apply);
