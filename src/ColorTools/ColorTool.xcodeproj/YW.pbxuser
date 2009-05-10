@@ -327,6 +327,13 @@
 			DA91B2D30FB680AC008910EB /* PBXTextBookmark */ = DA91B2D30FB680AC008910EB /* PBXTextBookmark */;
 			DA91B2D50FB68189008910EB /* PBXTextBookmark */ = DA91B2D50FB68189008910EB /* PBXTextBookmark */;
 			DA91B2D70FB682B9008910EB /* PBXTextBookmark */ = DA91B2D70FB682B9008910EB /* PBXTextBookmark */;
+			DA91B2DB0FB6839E008910EB /* PBXTextBookmark */ = DA91B2DB0FB6839E008910EB /* PBXTextBookmark */;
+			DA91B2DC0FB6839E008910EB /* PBXTextBookmark */ = DA91B2DC0FB6839E008910EB /* PBXTextBookmark */;
+			DA91B2DD0FB6839E008910EB /* PBXTextBookmark */ = DA91B2DD0FB6839E008910EB /* PBXTextBookmark */;
+			DA91B2DE0FB6839E008910EB /* PBXTextBookmark */ = DA91B2DE0FB6839E008910EB /* PBXTextBookmark */;
+			DA91B2DF0FB6839E008910EB /* PBXTextBookmark */ = DA91B2DF0FB6839E008910EB /* PBXTextBookmark */;
+			DA91B2E10FB683B0008910EB /* PBXTextBookmark */ = DA91B2E10FB683B0008910EB /* PBXTextBookmark */;
+			DA91B2E20FB68519008910EB /* PBXTextBookmark */ = DA91B2E20FB68519008910EB /* PBXTextBookmark */;
 			DAA4A3890F93913F00AA6564 = DAA4A3890F93913F00AA6564 /* PBXTextBookmark */;
 			DAA4A38B0F93913F00AA6564 = DAA4A38B0F93913F00AA6564 /* PBXTextBookmark */;
 			DAA4A38C0F93913F00AA6564 = DAA4A38C0F93913F00AA6564 /* PBXTextBookmark */;
@@ -3224,6 +3231,76 @@
 		vrLen = 614;
 		vrLoc = 4477;
 	};
+	DA91B2DB0FB6839E008910EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAA4A2720F937C1C00AA6564 /* gimpdrawable.c */;
+		name = "gimpdrawable.c: 99";
+		rLen = 0;
+		rLoc = 3279;
+		rType = 0;
+		vrLen = 808;
+		vrLoc = 2702;
+	};
+	DA91B2DC0FB6839E008910EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */;
+		name = "FiltersShowViewController.m: 113";
+		rLen = 0;
+		rLoc = 3510;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 2871;
+	};
+	DA91B2DD0FB6839E008910EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */;
+		name = "FiltersShowViewController.m: 113";
+		rLen = 0;
+		rLoc = 3510;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 2871;
+	};
+	DA91B2DE0FB6839E008910EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAA4A2720F937C1C00AA6564 /* gimpdrawable.c */;
+		name = "gimpdrawable.c: 99";
+		rLen = 0;
+		rLoc = 3279;
+		rType = 0;
+		vrLen = 808;
+		vrLoc = 2702;
+	};
+	DA91B2DF0FB6839E008910EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */;
+		name = "FiltersShowViewController.m: 37";
+		rLen = 0;
+		rLoc = 889;
+		rType = 0;
+		vrLen = 1113;
+		vrLoc = 693;
+	};
+	DA91B2E10FB683B0008910EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */;
+		name = "FiltersShowViewController.m: 63";
+		rLen = 0;
+		rLoc = 1996;
+		rType = 0;
+		vrLen = 945;
+		vrLoc = 1092;
+	};
+	DA91B2E20FB68519008910EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */;
+		name = "FiltersShowViewController.m: 37";
+		rLen = 6;
+		rLoc = 883;
+		rType = 0;
+		vrLen = 963;
+		vrLoc = 558;
+	};
 	DAA4A2620F937C1C00AA6564 /* cartoon.c */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {439, 8554}}";
@@ -3316,9 +3393,9 @@
 	};
 	DAA4A2720F937C1C00AA6564 /* gimpdrawable.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {952, 5320}}";
-			sepNavSelRange = "{2520, 40}";
-			sepNavVisRange = "{2270, 930}";
+			sepNavIntBoundsRect = "{{0, 0}, {941, 5348}}";
+			sepNavSelRange = "{3279, 0}";
+			sepNavVisRange = "{2822, 926}";
 		};
 	};
 	DAA4A2730F937C1C00AA6564 /* gimpdrawable.h */ = {
@@ -3624,9 +3701,9 @@
 	};
 	E87C2F460F98D1620057EF63 /* FiltersShowViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {941, 3444}}";
-			sepNavSelRange = "{4789, 0}";
-			sepNavVisRange = "{4477, 614}";
+			sepNavIntBoundsRect = "{{0, 0}, {941, 2856}}";
+			sepNavSelRange = "{883, 6}";
+			sepNavVisRange = "{558, 963}";
 		};
 	};
 	E89E32E10F64B059007F75C9 /* ColorToolViewController.m */ = {
